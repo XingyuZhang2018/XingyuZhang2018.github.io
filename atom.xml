@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>张兴宇的Wiki</title>
+  <title>兴宇的Wiki</title>
   
   <subtitle>心雨</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-10-27T05:42:27.592Z</updated>
+  <updated>2019-10-27T10:40:25.603Z</updated>
   <id>/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Markdown语法</title>
+    <link href="/2019/10/27/markdown-yu-fa/"/>
+    <id>/2019/10/27/markdown-yu-fa/</id>
+    <published>2019-10-27T10:08:12.000Z</published>
+    <updated>2019-10-27T10:40:25.603Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Markdown总体格式&quot;&gt;&lt;a href=&quot;#Markdown总体格式&quot; class=&quot;headerlink&quot; title=&quot;Markdown总体格式&quot;&gt;&lt;/a&gt;Markdown总体格式&lt;/h1&gt;&lt;h2 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="编程语法" scheme="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E6%B3%95/"/>
+    
+    
+      <category term="Markdown" scheme="/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Texlive+VSCode配置</title>
     <link href="/2019/10/27/texlive-vscode-pei-zhi/"/>
     <id>/2019/10/27/texlive-vscode-pei-zhi/</id>
     <published>2019-10-27T04:57:23.000Z</published>
-    <updated>2019-10-27T05:42:27.592Z</updated>
+    <updated>2019-10-27T05:47:03.413Z</updated>
     
     <summary type="html">
     
@@ -38,9 +64,9 @@
       <category term="软件安装和配置" scheme="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
     
     
-      <category term="VSCode" scheme="/tags/VSCode/"/>
-    
       <category term="LaTeX" scheme="/tags/LaTeX/"/>
+    
+      <category term="VSCode" scheme="/tags/VSCode/"/>
     
   </entry>
   
@@ -76,7 +102,7 @@
     <link href="/2019/10/27/da-jian-zi-ji-de-wiki/"/>
     <id>/2019/10/27/da-jian-zi-ji-de-wiki/</id>
     <published>2019-10-27T02:46:40.000Z</published>
-    <updated>2019-10-27T04:15:50.771Z</updated>
+    <updated>2019-10-27T10:09:10.187Z</updated>
     
     <summary type="html">
     

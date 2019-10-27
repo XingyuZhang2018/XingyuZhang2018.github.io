@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/2019/10/27/markdown-yu-fa/</loc>
+    
+    <lastmod>2019-10-27T10:40:25.603Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/2019/10/27/da-jian-zi-ji-de-wiki/</loc>
+    
+    <lastmod>2019-10-27T10:09:10.187Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/friends/index.html</loc>
+    
+    <lastmod>2019-10-27T10:00:57.671Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>/2019/10/27/texlive-vscode-pei-zhi/</loc>
     
-    <lastmod>2019-10-27T05:42:27.592Z</lastmod>
+    <lastmod>2019-10-27T05:47:03.413Z</lastmod>
     
   </url>
   
@@ -16,23 +37,9 @@
   </url>
   
   <url>
-    <loc>/2019/10/27/da-jian-zi-ji-de-wiki/</loc>
-    
-    <lastmod>2019-10-27T04:15:50.771Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>/contact/index.html</loc>
     
     <lastmod>2019-10-27T03:35:41.517Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/friends/index.html</loc>
-    
-    <lastmod>2019-10-27T02:39:36.433Z</lastmod>
     
   </url>
   
