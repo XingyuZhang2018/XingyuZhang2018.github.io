@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-10-27T03:01:27.893Z</updated>
+  <updated>2019-10-27T05:10:34.457Z</updated>
   <id>/</id>
   
   <author>
@@ -17,11 +17,66 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Texlive+VSCode配置</title>
+    <link href="/2019/10/27/texlive-vscode-pei-zhi/"/>
+    <id>/2019/10/27/texlive-vscode-pei-zhi/</id>
+    <published>2019-10-27T04:57:23.000Z</published>
+    <updated>2019-10-27T05:10:34.457Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Texlive-VScode配置&quot;&gt;&lt;a href=&quot;#Texlive-VScode配置&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="软件安装和配置" scheme="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
+    
+    
+      <category term="LaTeX" scheme="/tags/LaTeX/"/>
+    
+      <category term="VSCode" scheme="/tags/VSCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VScode安装和配置 </title>
+    <link href="/2019/10/27/vscode-an-zhuang-he-pei-zhi/"/>
+    <id>/2019/10/27/vscode-an-zhuang-he-pei-zhi/</id>
+    <published>2019-10-27T04:19:57.000Z</published>
+    <updated>2019-10-27T05:11:00.389Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;VSCode安装和配置&quot;&gt;&lt;a href=&quot;#VSCode安装和配置&quot; class=&quot;headerlink&quot; title=&quot;VSCode安装和配置&quot;&gt;&lt;/a&gt;VSCode安装和配置&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;Visual Studio
+        
+      
+    
+    </summary>
+    
+      <category term="软件安装和配置" scheme="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
+    
+    
+      <category term="VSCode" scheme="/tags/VSCode/"/>
+    
+  </entry>
+  
+  <entry>
     <title>搭建自己的wiki</title>
     <link href="/2019/10/27/da-jian-zi-ji-de-wiki/"/>
     <id>/2019/10/27/da-jian-zi-ji-de-wiki/</id>
     <published>2019-10-27T02:46:40.000Z</published>
-    <updated>2019-10-27T03:01:27.893Z</updated>
+    <updated>2019-10-27T04:15:50.771Z</updated>
     
     <summary type="html">
     
@@ -34,6 +89,8 @@
       
     
     </summary>
+    
+      <category term="随笔" scheme="/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
       <category term="随笔" scheme="/tags/%E9%9A%8F%E7%AC%94/"/>

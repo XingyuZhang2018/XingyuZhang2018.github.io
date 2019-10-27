@@ -4,12 +4,70 @@
   
     
     <entry>
+      <title>Texlive+VSCode配置</title>
+      <link href="/2019/10/27/texlive-vscode-pei-zhi/"/>
+      <url>/2019/10/27/texlive-vscode-pei-zhi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Texlive-VScode配置"><a href="#Texlive-VScode配置" class="headerlink" title="Texlive+VScode配置"></a>Texlive+VScode配置</h1><p>VSCode写代码太方便，高亮文本很舒服，比以前用的CTeX舒服，CTeX毕竟太老了，然后就换成Texlive了</p><h2 id="关于CTeX"><a href="#关于CTeX" class="headerlink" title="关于CTeX"></a>关于CTeX</h2><h3 id="CTeX-套装"><a href="#CTeX-套装" class="headerlink" title="CTeX 套装"></a>CTeX 套装</h3><p>CTeX 套装是科学院吴凌云研究员的个人作品。在 CTeX 套装刚刚问世之时，因其解决了繁琐的中文字体安装工作，所以广受欢迎。但是，一方面 CTeX 套装已经很久不更新，内里的宏包、工具陈旧；另一方面，随着 XeLaTeX 的发展，以及 xeCJK 等技术的成熟，上述这些繁琐的工作已经没有必要而失去意义；因此，现在不推荐使用 CTeX 套装。</p><blockquote><p>不要安装和使用 CTeX 套装！</p></blockquote><h3 id="CTeX-宏集"><a href="#CTeX-宏集" class="headerlink" title="CTeX 宏集"></a>CTeX 宏集</h3><p>虽然它的名字也是「CTeX」，但是 CTeX 宏集和 CTeX 套装是两个不同的东西。CTeX 宏集是集成了中文支持、操作系统判定、字体选择、版式预设为一体的一组宏包和文档类的合集。我们推荐在任何情况下，优先使用 CTeX 宏集处理中文。</p><blockquote><p>请在任何情况下优先使用 CTeX 宏集在 LaTeX 中处理中文！</p></blockquote><h2 id="搭建步骤"><a href="#搭建步骤" class="headerlink" title="搭建步骤"></a>搭建步骤</h2><h3 id="1-安装TeX-Live和VSCode"><a href="#1-安装TeX-Live和VSCode" class="headerlink" title="1.安装TeX Live和VSCode"></a>1.安装TeX Live和VSCode</h3><p>你可以从官方站点下载它们的安装包然后安装，安装没有什么特定配置，直接默认安装就好。点击<a href="http://mirror.ctan.org/systems/texlive/Images/texlive2019.iso" target="_blank" rel="noopener">TeX Live下载链接</a>，将会「自动选择」距离你最近的镜像下载。下载的同时[安装VScode](?file=002-软件/001-VScode/001-安装和配置# VSCode安装和配置)</p><h3 id="2-VSCode配置"><a href="#2-VSCode配置" class="headerlink" title="2.VSCode配置"></a>2.VSCode配置</h3><p>VSCode 安装完成之后，在扩展商店(打开<code>Ctrl+Shift+X</code>或者点击<img src="assets/002/001/001-1571841411663.png=-30" alt>)安装 LaTeX Workshop 插件。<br><img src="assets/002/003/01-1572056689537.png=-300" alt></p><h3 id="3-编译Tex文件"><a href="#3-编译Tex文件" class="headerlink" title="3.编译Tex文件"></a>3.编译Tex文件</h3><p>新建文件夹，如<code>latex学习</code>，新建一个<code>.tex</code>文本，然后<code>Ctrl+Alt+X</code>或者点击<img src="assets/002/003/001-1572072607480.png=30-" alt>打开LaTeX面板编译<br><img src="assets/002/003/001-1572072549031.png=200-" alt><br>编译成功会会出现很多文件，其中包括<code>.pdf</code>文件，可以用以下方式方便浏览<br><img src="assets/002/003/001-1572072807763.png=200-" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件安装和配置 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LaTeX </tag>
+            
+            <tag> VSCode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VScode安装和配置 </title>
+      <link href="/2019/10/27/vscode-an-zhuang-he-pei-zhi/"/>
+      <url>/2019/10/27/vscode-an-zhuang-he-pei-zhi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="VSCode安装和配置"><a href="#VSCode安装和配置" class="headerlink" title="VSCode安装和配置"></a>VSCode安装和配置</h1><blockquote><p>Visual Studio Code（简称VS Code）是一个由微软开发，同时支持Windows 、 Linux和macOS等操作系统且开放源代码的代码编辑器，它支持测试，并内置了Git 版本控制功能，同时也具有开发环境功能，例如代码补全（类似于 IntelliSense）、代码片段和代码重构等，该编辑器支持用户个性化配置，例如改变主题颜色、键盘快捷方式等各种属性和参数，同时还在编辑器中内置了扩展程序管理的功能。<a href="https://zh.wikipedia.org/wiki/Visual_Studio_Code" target="_blank" rel="noopener">^1</a></p></blockquote><p><a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code官网</a>，根据系统直接下载软件包安装。</p><h2 id="配置中文"><a href="#配置中文" class="headerlink" title="配置中文"></a>配置中文</h2><p>在扩展商店(打开<code>Ctrl+Shift+X</code>或者点击<img src="1.png" height="30">，搜索<code>chinese</code>，安装简体中文包<br><img src="2.png" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件安装和配置 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> VSCode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>搭建自己的wiki</title>
       <link href="/2019/10/27/da-jian-zi-ji-de-wiki/"/>
       <url>/2019/10/27/da-jian-zi-ji-de-wiki/</url>
       
         <content type="html"><![CDATA[<p>第一次搭建自己的Wiki，开始用的是<a href="https://xingyuzhang2018.github.io/xingyuwiki.github.io/?file=home-%E9%A6%96%E9%A1%B5" target="_blank" rel="noopener">amWiki</a>，学习了基本的markdown语法，确实简单，但是真的丑= =！，然后去网上搜索了别人搭的wiki和blog，特别是看了<a href="https://www.dandyweng.com/" target="_blank" rel="noopener">翁天信的主页</a>后，感觉自己被打击了，被同龄人打击到了，但是转念一想，我只是想搭一个整理自己平时的想法和知识框架的wiki，而不是分享美工的地方，我需要的只是一个外观还行的模板，然后直接填入内容就好了。</p><p>看上了Hexo，现成模板多而且简单，直接选了<a href="https://godweiyang.com/" target="_blank" rel="noopener">别人的模板</a>和<a href="https://godweiyang.com/2018/04/13/hexo-blog/#toc-heading-22" target="_blank" rel="noopener">教程</a>，默默修改了一天，开始这篇新的文章，接下来把amWiki写的移植过来好了。</p>]]></content>
       
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
       
       
         <tags>

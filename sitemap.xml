@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>/contact/index.html</loc>
+    <loc>/2019/10/27/vscode-an-zhuang-he-pei-zhi/</loc>
     
-    <lastmod>2019-10-27T03:35:41.517Z</lastmod>
+    <lastmod>2019-10-27T05:11:00.389Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/2019/10/27/texlive-vscode-pei-zhi/</loc>
+    
+    <lastmod>2019-10-27T05:10:34.457Z</lastmod>
     
   </url>
   
   <url>
     <loc>/2019/10/27/da-jian-zi-ji-de-wiki/</loc>
     
-    <lastmod>2019-10-27T03:01:27.893Z</lastmod>
+    <lastmod>2019-10-27T04:15:50.771Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/contact/index.html</loc>
+    
+    <lastmod>2019-10-27T03:35:41.517Z</lastmod>
     
   </url>
   
