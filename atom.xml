@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-10-27T10:40:25.603Z</updated>
+  <updated>2019-10-27T12:40:28.912Z</updated>
   <id>/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Markdown语法</title>
-    <link href="/2019/10/27/markdown-yu-fa/"/>
-    <id>/2019/10/27/markdown-yu-fa/</id>
-    <published>2019-10-27T10:08:12.000Z</published>
-    <updated>2019-10-27T10:40:25.603Z</updated>
+    <title>Hexo语法</title>
+    <link href="/2019/10/27/hexo-yu-fa/"/>
+    <id>/2019/10/27/hexo-yu-fa/</id>
+    <published>2019-10-27T11:58:19.000Z</published>
+    <updated>2019-10-27T12:40:28.912Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,36 @@
       
         
         
-          &lt;h1 id=&quot;Markdown总体格式&quot;&gt;&lt;a href=&quot;#Markdown总体格式&quot; class=&quot;headerlink&quot; title=&quot;Markdown总体格式&quot;&gt;&lt;/a&gt;Markdown总体格式&lt;/h1&gt;&lt;h2 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot;
+          &lt;h1 id=&quot;Hexo语法&quot;&gt;&lt;a href=&quot;#Hexo语法&quot; class=&quot;headerlink&quot; title=&quot;Hexo语法&quot;&gt;&lt;/a&gt;Hexo语法&lt;/h1&gt;&lt;p&gt;学习搭建Hexo博客，例如搭建像本网站一样的博客，请移步查看&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="编程语法" scheme="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E6%B3%95/"/>
+    
+    
+      <category term="Hexo" scheme="/tags/Hexo/"/>
+    
+      <category term="Markdown" scheme="/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown语法</title>
+    <link href="/2019/10/27/markdown-yu-fa/"/>
+    <id>/2019/10/27/markdown-yu-fa/</id>
+    <published>2019-10-27T10:08:12.000Z</published>
+    <updated>2019-10-27T12:24:25.303Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Markdown语法&quot;&gt;&lt;a href=&quot;#Markdown语法&quot; class=&quot;headerlink&quot; title=&quot;Markdown语法&quot;&gt;&lt;/a&gt;Markdown语法&lt;/h1&gt;&lt;p&gt;这里写的是不含任何插件的原生态Markdown的语法&lt;/p&gt;
+&lt;h2
         
       
     
