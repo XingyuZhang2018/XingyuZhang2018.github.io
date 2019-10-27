@@ -38,9 +38,9 @@
       <category term="编程语法" scheme="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E6%B3%95/"/>
     
     
-      <category term="Hexo" scheme="/tags/Hexo/"/>
-    
       <category term="Markdown" scheme="/tags/Markdown/"/>
+    
+      <category term="Hexo" scheme="/tags/Hexo/"/>
     
   </entry>
   
