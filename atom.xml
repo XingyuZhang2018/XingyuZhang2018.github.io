@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-10-27T05:22:03.355Z</updated>
+  <updated>2019-10-27T05:42:27.592Z</updated>
   <id>/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="/2019/10/27/texlive-vscode-pei-zhi/"/>
     <id>/2019/10/27/texlive-vscode-pei-zhi/</id>
     <published>2019-10-27T04:57:23.000Z</published>
-    <updated>2019-10-27T05:22:03.355Z</updated>
+    <updated>2019-10-27T05:42:27.592Z</updated>
     
     <summary type="html">
     
@@ -38,9 +38,9 @@
       <category term="软件安装和配置" scheme="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
     
     
-      <category term="LaTeX" scheme="/tags/LaTeX/"/>
-    
       <category term="VSCode" scheme="/tags/VSCode/"/>
+    
+      <category term="LaTeX" scheme="/tags/LaTeX/"/>
     
   </entry>
   
@@ -49,7 +49,7 @@
     <link href="/2019/10/27/vscode-an-zhuang-he-pei-zhi/"/>
     <id>/2019/10/27/vscode-an-zhuang-he-pei-zhi/</id>
     <published>2019-10-27T04:19:57.000Z</published>
-    <updated>2019-10-27T05:11:00.389Z</updated>
+    <updated>2019-10-27T05:37:48.978Z</updated>
     
     <summary type="html">
     
