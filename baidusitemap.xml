@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>/2019/10/27/texlive-vscode-pei-zhi/</loc>
+    <lastmod>2019-10-27</lastmod>
+  </url>  <url>
     <loc>/2019/10/27/hexo-yu-fa/</loc>
     <lastmod>2019-10-27</lastmod>
   </url>  <url>
@@ -8,9 +11,6 @@
     <lastmod>2019-10-27</lastmod>
   </url>  <url>
     <loc>/2019/10/27/da-jian-zi-ji-de-wiki/</loc>
-    <lastmod>2019-10-27</lastmod>
-  </url>  <url>
-    <loc>/2019/10/27/texlive-vscode-pei-zhi/</loc>
     <lastmod>2019-10-27</lastmod>
   </url>  <url>
     <loc>/2019/10/27/vscode-an-zhuang-he-pei-zhi/</loc>
