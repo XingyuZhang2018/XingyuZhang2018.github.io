@@ -1,0 +1,5 @@
+/2019/10/27/hexo-yu-fa/
+/2019/10/27/markdown-yu-fa/
+/2019/10/27/texlive-vscode-pei-zhi/
+/2019/10/27/vscode-an-zhuang-he-pei-zhi/
+/2019/10/27/da-jian-zi-ji-de-wiki/

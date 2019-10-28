@@ -93,9 +93,9 @@
       <category term="软件安装和配置" scheme="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
     
     
-      <category term="VSCode" scheme="/tags/VSCode/"/>
-    
       <category term="LaTeX" scheme="/tags/LaTeX/"/>
+    
+      <category term="VSCode" scheme="/tags/VSCode/"/>
     
   </entry>
   
