@@ -38,9 +38,9 @@
       <category term="编程语法" scheme="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E6%B3%95/"/>
     
     
-      <category term="Markdown" scheme="/tags/Markdown/"/>
-    
       <category term="Hexo" scheme="/tags/Hexo/"/>
+    
+      <category term="Markdown" scheme="/tags/Markdown/"/>
     
   </entry>
   
@@ -93,9 +93,9 @@
       <category term="软件安装和配置" scheme="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
     
     
-      <category term="LaTeX" scheme="/tags/LaTeX/"/>
-    
       <category term="VSCode" scheme="/tags/VSCode/"/>
+    
+      <category term="LaTeX" scheme="/tags/LaTeX/"/>
     
   </entry>
   
