@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-10-28T00:38:13.721Z</updated>
+  <updated>2019-10-28T11:50:36.347Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo+Github pages绑定域名</title>
+    <link href="/2019/10/28/hexo-github-pages-bang-ding-yu-ming/"/>
+    <id>/2019/10/28/hexo-github-pages-bang-ding-yu-ming/</id>
+    <published>2019-10-28T11:14:05.000Z</published>
+    <updated>2019-10-28T11:50:36.347Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Hexo-Github-pages绑定域名&quot;&gt;&lt;a href=&quot;#Hexo-Github-pages绑定域名&quot; class=&quot;headerlink&quot; title=&quot;Hexo+Github pages绑定域名&quot;&gt;&lt;/a&gt;Hexo+Github
+        
+      
+    
+    </summary>
+    
+      <category term="软件安装和配置" scheme="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
+    
+    
+      <category term="Hexo" scheme="/tags/Hexo/"/>
+    
+      <category term="Github pages" scheme="/tags/Github-pages/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo语法</title>

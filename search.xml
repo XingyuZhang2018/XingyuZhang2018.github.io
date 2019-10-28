@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Hexo+Github pages绑定域名</title>
+      <link href="/2019/10/28/hexo-github-pages-bang-ding-yu-ming/"/>
+      <url>/2019/10/28/hexo-github-pages-bang-ding-yu-ming/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Hexo-Github-pages绑定域名"><a href="#Hexo-Github-pages绑定域名" class="headerlink" title="Hexo+Github pages绑定域名"></a>Hexo+Github pages绑定域名</h1><p>部署好GitHub pages后想换个域名，用的中文域名，老是出错，这里分享一下中文域名遇到的坑。</p><h2 id="绑定域名步骤"><a href="#绑定域名步骤" class="headerlink" title="绑定域名步骤"></a>绑定域名步骤</h2><h3 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h3><p>这里以在腾讯云上购买域名为例,大家也可以去其他平台购买域名。登录<a href="https://dnspod.cloud.tencent.com/" target="_blank" rel="noopener">腾讯云</a>注册域名。注册域名前需查询域名是否已被注册，选择自己喜欢的域名，先不要支付！因为域名属于即时产品，域名注册时收取的费用也是需要上交到注册局的，所以一经注册是不能进行退费处理的，所以先想好再买，其次，现在域名都需要实名认证的，假如你在转户口换了身份证什么的可能不能认证成功，所以推荐先创建信息模板，以腾讯云为例：登陆到腾讯云控制台——云产品——域名管理——域名信息模板——新建模板，实名认证成功后再购买域名直接用模板认证就很快了，也不会买了域名没认证用不了了。<br><img src="1.png" alt></p><h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>购买且实名认证后，进入管理控制台解析域名<br><img src="2.png" alt><br>按照下面配置，记录值换成自己的GitHub pages地址<br><img src="3.png" alt></p><h3 id="创建CNAME文件"><a href="#创建CNAME文件" class="headerlink" title="创建CNAME文件"></a>创建CNAME文件</h3><p>在本地的根目录下的<code>source</code>文件夹中新建一个名为<code>CNAME</code>的文件，编辑文件内容为个人域名（没有<code>http://</code> ,也没有<code>www.</code>）,使用hexo d -g命令部署博客，这时在浏览器中输入新注册的域名，已经可以正常的访问博客了。</p><blockquote><p>注意<del>大坑</del>：<code>CNAME</code>的文件中英文域名直接写新注册的域名，中文域名的话,则需先将中文域名转换为Punycode标准编码的字符串：<a href="http://www.dh.vg/tools/zm.php" target="_blank" rel="noopener">中文域名转换Punycode标准编码工具</a>，例如，我的域名<code>心在就好.com</code>转化为<code>xn--3ds27ck5co6e.com</code></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件安装和配置 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Github pages </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo语法</title>
       <link href="/2019/10/27/hexo-yu-fa/"/>
       <url>/2019/10/27/hexo-yu-fa/</url>
