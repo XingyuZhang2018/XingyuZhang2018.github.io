@@ -93,9 +93,9 @@
       <category term="软件安装和配置" scheme="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
     
     
-      <category term="LaTeX" scheme="/tags/LaTeX/"/>
-    
       <category term="VSCode" scheme="/tags/VSCode/"/>
+    
+      <category term="LaTeX" scheme="/tags/LaTeX/"/>
     
   </entry>
   
@@ -131,7 +131,7 @@
     <link href="/2019/10/27/da-jian-zi-ji-de-wiki/"/>
     <id>/2019/10/27/da-jian-zi-ji-de-wiki/</id>
     <published>2019-10-27T02:46:40.000Z</published>
-    <updated>2019-10-27T10:09:10.187Z</updated>
+    <updated>2019-10-28T00:26:44.332Z</updated>
     
     <summary type="html">
     
@@ -148,7 +148,11 @@
       <category term="随笔" scheme="/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
+      <category term="Hexo" scheme="/tags/Hexo/"/>
+    
       <category term="随笔" scheme="/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="amWiki" scheme="/tags/amWiki/"/>
     
   </entry>
   

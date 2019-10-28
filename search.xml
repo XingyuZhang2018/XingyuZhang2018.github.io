@@ -72,9 +72,9 @@
       
         <tags>
             
-            <tag> LaTeX </tag>
-            
             <tag> VSCode </tag>
+            
+            <tag> LaTeX </tag>
             
         </tags>
       
@@ -124,7 +124,11 @@
       
         <tags>
             
+            <tag> Hexo </tag>
+            
             <tag> 随笔 </tag>
+            
+            <tag> amWiki </tag>
             
         </tags>
       
