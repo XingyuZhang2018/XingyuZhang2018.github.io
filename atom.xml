@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-10-27T12:40:28.912Z</updated>
+  <updated>2019-10-28T00:38:13.721Z</updated>
   <id>/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="/2019/10/27/hexo-yu-fa/"/>
     <id>/2019/10/27/hexo-yu-fa/</id>
     <published>2019-10-27T11:58:19.000Z</published>
-    <updated>2019-10-27T12:40:28.912Z</updated>
+    <updated>2019-10-28T00:38:13.721Z</updated>
     
     <summary type="html">
     
@@ -38,9 +38,9 @@
       <category term="编程语法" scheme="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E6%B3%95/"/>
     
     
-      <category term="Hexo" scheme="/tags/Hexo/"/>
-    
       <category term="Markdown" scheme="/tags/Markdown/"/>
+    
+      <category term="Hexo" scheme="/tags/Hexo/"/>
     
   </entry>
   
@@ -93,9 +93,9 @@
       <category term="软件安装和配置" scheme="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
     
     
-      <category term="VSCode" scheme="/tags/VSCode/"/>
-    
       <category term="LaTeX" scheme="/tags/LaTeX/"/>
+    
+      <category term="VSCode" scheme="/tags/VSCode/"/>
     
   </entry>
   

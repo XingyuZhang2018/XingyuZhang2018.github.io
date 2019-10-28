@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/2019/10/27/hexo-yu-fa/</loc>
+    
+    <lastmod>2019-10-28T00:38:13.721Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>/2019/10/27/da-jian-zi-ji-de-wiki/</loc>
     
     <lastmod>2019-10-28T00:26:44.332Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>/about/index.html</loc>
     
     <lastmod>2019-10-27T12:53:27.075Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/2019/10/27/hexo-yu-fa/</loc>
-    
-    <lastmod>2019-10-27T12:40:28.912Z</lastmod>
     
   </url>
   

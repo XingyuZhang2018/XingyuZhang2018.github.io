@@ -9,9 +9,8 @@
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
     <meta name="description" content="Hexo语法学习搭建Hexo博客，例如搭建像本网站一样的博客，请移步查看超详细Hexo+Github博客搭建小白教程
-Hexo常用命令新建n新建的文件在/source/_posts/my-blog.md
-hexo n &#34;my blog&#34;
-编">
+Hexo常用命令新建new新建的文件在/source/_posts/my-blog.md
+hexo n &#34;my blog&#34;">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -315,12 +314,12 @@ hexo n &#34;my blog&#34;
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Hexo/" target="_blank">
-                            <span class="chip bg-color">Hexo</span>
-                        </a>
-                        
                         <a href="/tags/Markdown/" target="_blank">
                             <span class="chip bg-color">Markdown</span>
+                        </a>
+                        
+                        <a href="/tags/Hexo/" target="_blank">
+                            <span class="chip bg-color">Hexo</span>
                         </a>
                         
                     </div>
@@ -357,7 +356,7 @@ hexo n &#34;my blog&#34;
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    415
+                    442
                 </div>
                 
 
@@ -376,7 +375,7 @@ hexo n &#34;my blog&#34;
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="Hexo语法"><a href="#Hexo语法" class="headerlink" title="Hexo语法"></a>Hexo语法</h1><p>学习搭建Hexo博客，例如搭建像本网站一样的博客，请移步查看<a href="https://godweiyang.com/2018/04/13/hexo-blog/#toc-heading-43" target="_blank" rel="noopener">超详细Hexo+Github博客搭建小白教程</a></p>
-<h2 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h2><h3 id="新建n"><a href="#新建n" class="headerlink" title="新建n"></a>新建n</h3><p>新建的文件在<code>/source/_posts/my-blog.md</code></p>
+<h2 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h2><h3 id="新建new"><a href="#新建new" class="headerlink" title="新建new"></a>新建new</h3><p>新建的文件在<code>/source/_posts/my-blog.md</code></p>
 <pre class="line-numbers language-hexo"><code class="language-hexo">hexo n "my blog"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="编译generate"><a href="#编译generate" class="headerlink" title="编译generate"></a>编译generate</h3><p>一般部署上去的时候都需要编译一下，编译后，会出现一个public文件夹，将所有的md文件编译成html文件</p>
 <pre class="line-numbers language-hexo"><code class="language-hexo">hexo g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -394,8 +393,10 @@ top: 是否置顶
 tags: 标签
 categories: 分类
 mathjax: true/false 是否开启数学公式输入<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>当一篇文章有多个标签时，用中括号包含多个标签</p>
+<pre class="line-numbers language-hexo"><code class="language-hexo">tags: [标签1,标签2,标签3]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="网站内超链接"><a href="#网站内超链接" class="headerlink" title="网站内超链接"></a>网站内超链接</h3><pre class="line-numbers language-hexo"><code class="language-hexo">{% post_link Markdown语法 Markdown语法的超链接 %}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-{% post_link Markdown语法 Markdown语法的超链接 %}
+<a href="/2019/10/27/markdown-yu-fa/" title="Markdown语法的超链接">Markdown语法的超链接</a>
 
 <h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><p>当新建blog时，会产生<code>my-blog.md</code>和<code>my-blog</code>文件夹，要插入文章的图片放在该文件夹内，就可以直接引用，语法为：</p>
 <pre class="line-numbers language-hexo"><code class="language-hexo">![](picture.png)
@@ -498,9 +499,8 @@ mathjax: true/false 是否开启数学公式输入<span aria-hidden="true" class
                     <div class="summary block-with-text">
                         
                             Hexo语法学习搭建Hexo博客，例如搭建像本网站一样的博客，请移步查看超详细Hexo+Github博客搭建小白教程
-Hexo常用命令新建n新建的文件在/source/_posts/my-blog.md
+Hexo常用命令新建new新建的文件在/source/_posts/my-blog.md
 hexo n "my blog"
-编
                         
                     </div>
                     <div class="publish-info">
@@ -523,12 +523,12 @@ hexo n "my blog"
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/" target="_blank">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
                     <a href="/tags/Markdown/" target="_blank">
                         <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
+                    <a href="/tags/Hexo/" target="_blank">
+                        <span class="chip bg-color">Hexo</span>
                     </a>
                     
                 </div>
@@ -746,7 +746,7 @@ hexo n "my blog"
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">2.8k</span>
+            <span class="white-color">2.9k</span>
             
 
             <br>
