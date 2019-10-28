@@ -38,9 +38,9 @@
       <category term="编程语法" scheme="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E6%B3%95/"/>
     
     
-      <category term="Hexo" scheme="/tags/Hexo/"/>
-    
       <category term="Markdown" scheme="/tags/Markdown/"/>
+    
+      <category term="Hexo" scheme="/tags/Hexo/"/>
     
   </entry>
   
@@ -72,11 +72,11 @@
   </entry>
   
   <entry>
-    <title>Texlive+VSCode配置</title>
+    <title>TexLive+VSCode配置</title>
     <link href="/2019/10/27/texlive-vscode-pei-zhi/"/>
     <id>/2019/10/27/texlive-vscode-pei-zhi/</id>
     <published>2019-10-27T04:57:23.000Z</published>
-    <updated>2019-10-28T03:22:44.566Z</updated>
+    <updated>2019-10-28T09:07:43.891Z</updated>
     
     <summary type="html">
     
