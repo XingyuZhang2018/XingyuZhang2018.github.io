@@ -5,9 +5,9 @@
   <subtitle>心雨</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="xn--3ds27ck5co6e.com/"/>
+  <link href="http://xn--3ds27ck5co6e.com/"/>
   <updated>2019-10-28T11:50:36.347Z</updated>
-  <id>xn--3ds27ck5co6e.com/</id>
+  <id>http://xn--3ds27ck5co6e.com/</id>
   
   <author>
     <name>张兴宇</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hexo+Github pages绑定域名</title>
-    <link href="xn--3ds27ck5co6e.com/2019/10/28/hexo-github-pages-bang-ding-yu-ming/"/>
-    <id>xn--3ds27ck5co6e.com/2019/10/28/hexo-github-pages-bang-ding-yu-ming/</id>
+    <link href="http://xn--3ds27ck5co6e.com/2019/10/28/hexo-github-pages-bang-ding-yu-ming/"/>
+    <id>http://xn--3ds27ck5co6e.com/2019/10/28/hexo-github-pages-bang-ding-yu-ming/</id>
     <published>2019-10-28T11:14:05.000Z</published>
     <updated>2019-10-28T11:50:36.347Z</updated>
     
@@ -35,19 +35,19 @@
     
     </summary>
     
-      <category term="软件安装和配置" scheme="xn--3ds27ck5co6e.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
+      <category term="软件安装和配置" scheme="http://xn--3ds27ck5co6e.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
     
     
-      <category term="Hexo" scheme="xn--3ds27ck5co6e.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://xn--3ds27ck5co6e.com/tags/Hexo/"/>
     
-      <category term="Github pages" scheme="xn--3ds27ck5co6e.com/tags/Github-pages/"/>
+      <category term="Github pages" scheme="http://xn--3ds27ck5co6e.com/tags/Github-pages/"/>
     
   </entry>
   
   <entry>
     <title>Hexo语法</title>
-    <link href="xn--3ds27ck5co6e.com/2019/10/27/hexo-yu-fa/"/>
-    <id>xn--3ds27ck5co6e.com/2019/10/27/hexo-yu-fa/</id>
+    <link href="http://xn--3ds27ck5co6e.com/2019/10/27/hexo-yu-fa/"/>
+    <id>http://xn--3ds27ck5co6e.com/2019/10/27/hexo-yu-fa/</id>
     <published>2019-10-27T11:58:19.000Z</published>
     <updated>2019-10-28T00:38:13.721Z</updated>
     
@@ -63,19 +63,19 @@
     
     </summary>
     
-      <category term="编程语法" scheme="xn--3ds27ck5co6e.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E6%B3%95/"/>
+      <category term="编程语法" scheme="http://xn--3ds27ck5co6e.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E6%B3%95/"/>
     
     
-      <category term="Hexo" scheme="xn--3ds27ck5co6e.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://xn--3ds27ck5co6e.com/tags/Hexo/"/>
     
-      <category term="Markdown" scheme="xn--3ds27ck5co6e.com/tags/Markdown/"/>
+      <category term="Markdown" scheme="http://xn--3ds27ck5co6e.com/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>Markdown语法</title>
-    <link href="xn--3ds27ck5co6e.com/2019/10/27/markdown-yu-fa/"/>
-    <id>xn--3ds27ck5co6e.com/2019/10/27/markdown-yu-fa/</id>
+    <link href="http://xn--3ds27ck5co6e.com/2019/10/27/markdown-yu-fa/"/>
+    <id>http://xn--3ds27ck5co6e.com/2019/10/27/markdown-yu-fa/</id>
     <published>2019-10-27T10:08:12.000Z</published>
     <updated>2019-10-27T12:24:25.303Z</updated>
     
@@ -92,17 +92,17 @@
     
     </summary>
     
-      <category term="编程语法" scheme="xn--3ds27ck5co6e.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E6%B3%95/"/>
+      <category term="编程语法" scheme="http://xn--3ds27ck5co6e.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E6%B3%95/"/>
     
     
-      <category term="Markdown" scheme="xn--3ds27ck5co6e.com/tags/Markdown/"/>
+      <category term="Markdown" scheme="http://xn--3ds27ck5co6e.com/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>TexLive+VSCode配置</title>
-    <link href="xn--3ds27ck5co6e.com/2019/10/27/texlive-vscode-pei-zhi/"/>
-    <id>xn--3ds27ck5co6e.com/2019/10/27/texlive-vscode-pei-zhi/</id>
+    <link href="http://xn--3ds27ck5co6e.com/2019/10/27/texlive-vscode-pei-zhi/"/>
+    <id>http://xn--3ds27ck5co6e.com/2019/10/27/texlive-vscode-pei-zhi/</id>
     <published>2019-10-27T04:57:23.000Z</published>
     <updated>2019-10-28T12:01:13.687Z</updated>
     
@@ -118,19 +118,19 @@
     
     </summary>
     
-      <category term="软件安装和配置" scheme="xn--3ds27ck5co6e.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
+      <category term="软件安装和配置" scheme="http://xn--3ds27ck5co6e.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
     
     
-      <category term="VSCode" scheme="xn--3ds27ck5co6e.com/tags/VSCode/"/>
+      <category term="LaTeX" scheme="http://xn--3ds27ck5co6e.com/tags/LaTeX/"/>
     
-      <category term="LaTeX" scheme="xn--3ds27ck5co6e.com/tags/LaTeX/"/>
+      <category term="VSCode" scheme="http://xn--3ds27ck5co6e.com/tags/VSCode/"/>
     
   </entry>
   
   <entry>
     <title>VScode安装和配置 </title>
-    <link href="xn--3ds27ck5co6e.com/2019/10/27/vscode-an-zhuang-he-pei-zhi/"/>
-    <id>xn--3ds27ck5co6e.com/2019/10/27/vscode-an-zhuang-he-pei-zhi/</id>
+    <link href="http://xn--3ds27ck5co6e.com/2019/10/27/vscode-an-zhuang-he-pei-zhi/"/>
+    <id>http://xn--3ds27ck5co6e.com/2019/10/27/vscode-an-zhuang-he-pei-zhi/</id>
     <published>2019-10-27T04:19:57.000Z</published>
     <updated>2019-10-28T03:23:29.324Z</updated>
     
@@ -147,17 +147,17 @@
     
     </summary>
     
-      <category term="软件安装和配置" scheme="xn--3ds27ck5co6e.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
+      <category term="软件安装和配置" scheme="http://xn--3ds27ck5co6e.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
     
     
-      <category term="VSCode" scheme="xn--3ds27ck5co6e.com/tags/VSCode/"/>
+      <category term="VSCode" scheme="http://xn--3ds27ck5co6e.com/tags/VSCode/"/>
     
   </entry>
   
   <entry>
     <title>搭建自己的wiki</title>
-    <link href="xn--3ds27ck5co6e.com/2019/10/27/da-jian-zi-ji-de-wiki/"/>
-    <id>xn--3ds27ck5co6e.com/2019/10/27/da-jian-zi-ji-de-wiki/</id>
+    <link href="http://xn--3ds27ck5co6e.com/2019/10/27/da-jian-zi-ji-de-wiki/"/>
+    <id>http://xn--3ds27ck5co6e.com/2019/10/27/da-jian-zi-ji-de-wiki/</id>
     <published>2019-10-27T02:46:40.000Z</published>
     <updated>2019-10-28T00:26:44.332Z</updated>
     
@@ -173,14 +173,14 @@
     
     </summary>
     
-      <category term="随笔" scheme="xn--3ds27ck5co6e.com/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="http://xn--3ds27ck5co6e.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="Hexo" scheme="xn--3ds27ck5co6e.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://xn--3ds27ck5co6e.com/tags/Hexo/"/>
     
-      <category term="随笔" scheme="xn--3ds27ck5co6e.com/tags/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="http://xn--3ds27ck5co6e.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
-      <category term="amWiki" scheme="xn--3ds27ck5co6e.com/tags/amWiki/"/>
+      <category term="amWiki" scheme="http://xn--3ds27ck5co6e.com/tags/amWiki/"/>
     
   </entry>
   
