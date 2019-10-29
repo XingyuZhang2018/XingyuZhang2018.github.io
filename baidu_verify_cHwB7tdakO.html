@@ -4,12 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo+Github pages绑定域名, 兴宇的Wiki">
+    <meta name="keywords" content="兴宇的Wiki">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
-    <meta name="description" content="Hexo+Github pages绑定域名部署好GitHub pages后想换个域名，用的中文域名，老是出错，这里分享一下中文域名遇到的坑。
-绑定域名步骤购买域名这里以在腾讯云上购买域名为例,大家也可以去其他平台购买域名。登录腾讯云注册域名">
+    <meta name="description" content="兴宇的Wiki">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hexo+Github pages绑定域名 | 兴宇的Wiki</title>
+    <title>兴宇的Wiki</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -196,13 +195,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hexo+Github pages绑定域名
+                        
                     </div>
                 </div>
             </div>
@@ -312,28 +311,11 @@
                 <div class="col s7">
                     
                     <div class="article-tag">
-                        
-                        <a href="/tags/Hexo/" target="_blank">
-                            <span class="chip bg-color">Hexo</span>
-                        </a>
-                        
-                        <a href="/tags/Github-pages/" target="_blank">
-                            <span class="chip bg-color">Github pages</span>
-                        </a>
-                        
+                        <span class="chip bg-color">无标签</span>
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fa fa-bookmark fa-fw icon-category"></i>
-                        
-                        <a href="/categories/软件安装和配置/" class="post-category" target="_blank">
-                            软件安装和配置
-                        </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -341,7 +323,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-10-28
+                    2019-10-29
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -355,7 +337,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    490
+                    1
                 </div>
                 
 
@@ -373,14 +355,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Hexo-Github-pages绑定域名"><a href="#Hexo-Github-pages绑定域名" class="headerlink" title="Hexo+Github pages绑定域名"></a>Hexo+Github pages绑定域名</h1><p>部署好GitHub pages后想换个域名，用的中文域名，老是出错，这里分享一下中文域名遇到的坑。</p>
-<h2 id="绑定域名步骤"><a href="#绑定域名步骤" class="headerlink" title="绑定域名步骤"></a>绑定域名步骤</h2><h3 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h3><p>这里以在腾讯云上购买域名为例,大家也可以去其他平台购买域名。登录<a href="https://dnspod.cloud.tencent.com/" target="_blank" rel="noopener">腾讯云</a>注册域名。注册域名前需查询域名是否已被注册，选择自己喜欢的域名，先不要支付！因为域名属于即时产品，域名注册时收取的费用也是需要上交到注册局的，所以一经注册是不能进行退费处理的，所以先想好再买，其次，现在域名都需要实名认证的，假如你在转户口换了身份证什么的可能不能认证成功，所以推荐先创建信息模板，以腾讯云为例：登陆到腾讯云控制台——云产品——域名管理——域名信息模板——新建模板，实名认证成功后再购买域名直接用模板认证就很快了，也不会买了域名没认证用不了了。<br><img src="1.png" alt></p>
-<h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>购买且实名认证后，进入管理控制台解析域名<br><img src="2.png" alt><br>按照下面配置，记录值换成自己的GitHub pages地址<br><img src="3.png" alt></p>
-<h3 id="创建CNAME文件"><a href="#创建CNAME文件" class="headerlink" title="创建CNAME文件"></a>创建CNAME文件</h3><p>在本地的根目录下的<code>source</code>文件夹中新建一个名为<code>CNAME</code>的文件，编辑文件内容为个人域名（没有<code>http://</code> ,也没有<code>www.</code>）,使用hexo d -g命令部署博客，这时在浏览器中输入新注册的域名，已经可以正常的访问博客了。</p>
-<blockquote>
-<p>注意<del>大坑</del>：<code>CNAME</code>的文件中英文域名直接写新注册的域名，中文域名的话,则需先将中文域名转换为Punycode标准编码的字符串：<a href="http://www.dh.vg/tools/zm.php" target="_blank" rel="noopener">中文域名转换Punycode标准编码工具</a>，例如，我的域名<code>心在就好.com</code>转化为<code>xn--3ds27ck5co6e.com</code></p>
-</blockquote>
-
+                cHwB7tdakO
             </div>
             <hr />
 
@@ -414,9 +389,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Hexo+Github pages绑定域名》
+                    《》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/28/hexo-github-pages-bang-ding-yu-ming/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/baidu_verify_cHwB7tdakO.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 张兴宇
             </a> 采用
@@ -461,51 +436,31 @@
                 <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2019/10/28/hexo-github-pages-bang-ding-yu-ming/">
+                <a href="/baidu_verify_cHwB7tdakO.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Hexo+Github pages绑定域名">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Hexo+Github pages绑定域名</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Hexo+Github pages绑定域名部署好GitHub pages后想换个域名，用的中文域名，老是出错，这里分享一下中文域名遇到的坑。
-绑定域名步骤购买域名这里以在腾讯云上购买域名为例,大家也可以去其他平台购买域名。登录腾讯云注册域名
+                            cHwB7tdakO
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-28
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-29
                             </span>
                         <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/软件安装和配置/" class="post-category" target="_blank">
-                                    软件安装和配置
-                                </a>
-                            
                             
                         </span>
                     </div>
                 </div>
 
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Hexo/" target="_blank">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
-                    <a href="/tags/Github-pages/" target="_blank">
-                        <span class="chip bg-color">Github pages</span>
-                    </a>
-                    
-                </div>
                 
             </div>
         </div>
@@ -513,54 +468,34 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
             </div>
             <div class="card">
-                <a href="/2019/10/27/hexo-yu-fa/">
+                <a href="/baidu_verify_cHwB7tdakO.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Hexo语法">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Hexo语法</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Hexo语法学习搭建Hexo博客，例如搭建像本网站一样的博客，请移步查看超详细Hexo+Github博客搭建小白教程
-Hexo常用命令新建new新建的文件在/source/_posts/my-blog.md
-hexo n "my blog"
+                            cHwB7tdakO
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-27
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-29
                             </span>
                         <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/编程语法/" class="post-category" target="_blank">
-                                    编程语法
-                                </a>
-                            
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Hexo/" target="_blank">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
-                    <a href="/tags/Markdown/" target="_blank">
-                        <span class="chip bg-color">Markdown</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -704,13 +639,6 @@ hexo n "my blog"
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
 
     <footer class="page-footer bg-color">
     <div class="container row center-align">
