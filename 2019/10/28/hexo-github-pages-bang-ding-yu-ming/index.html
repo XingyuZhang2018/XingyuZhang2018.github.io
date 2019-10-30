@@ -442,6 +442,28 @@
     </div>
 
     
+    <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '8cd6a000d27aad085519',
+        clientSecret: 'b81cc3ed709f1159f66398376590e79f2a9c87fa',
+        repo: 'XingyuZhang2018.github.io',
+        owner: 'XingyuZhang2018',
+        admin: "XingyuZhang2018",
+        id: '2019/10/28/hexo-github-pages-bang-ding-yu-ming/',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
 
     
 
@@ -521,9 +543,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Hexo语法学习搭建Hexo博客，例如搭建像本网站一样的博客，请移步查看超详细Hexo+Github博客搭建小白教程
-Hexo常用命令新建new新建的文件在/source/_posts/my-blog.md
-hexo n "my blog"
+                            Hexo常用命令和特定的Markdown语法
                         
                     </div>
                     <div class="publish-info">
@@ -712,7 +732,7 @@ hexo n "my blog"
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">4.8k</span>
+            <span class="white-color">4.9k</span>
             
 
             <br>

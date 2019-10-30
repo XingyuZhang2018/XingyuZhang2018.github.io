@@ -314,12 +314,12 @@ TEX Live是由国际TEX用户组（TEX Users Group，TUG）整理和发布的T">
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/LaTeX/" target="_blank">
-                            <span class="chip bg-color">LaTeX</span>
-                        </a>
-                        
                         <a href="/tags/VSCode/" target="_blank">
                             <span class="chip bg-color">VSCode</span>
+                        </a>
+                        
+                        <a href="/tags/LaTeX/" target="_blank">
+                            <span class="chip bg-color">LaTeX</span>
                         </a>
                         
                     </div>
@@ -389,62 +389,78 @@ TEX Live是由国际TEX用户组（TEX Users Group，TUG）整理和发布的T">
 <h2 id="搭建步骤"><a href="#搭建步骤" class="headerlink" title="搭建步骤"></a>搭建步骤</h2><h3 id="1-安装TeX-Live和VSCode"><a href="#1-安装TeX-Live和VSCode" class="headerlink" title="1.安装TeX Live和VSCode"></a>1.安装TeX Live和VSCode</h3><p>你可以从官方站点下载它们的安装包然后安装，点击<a href="http://mirror.ctan.org/systems/texlive/Images/texlive2019.iso" target="_blank" rel="noopener">TeX Live下载链接</a>，将会「自动选择」距离你最近的镜像下载。下载的同时<a href="/2019/10/27/vscode-an-zhuang-he-pei-zhi/" title="安装VScode">安装VScode</a>，安装都没有什么特定配置，直接默认安装就好。</p>
 <h3 id="2-VSCode配置"><a href="#2-VSCode配置" class="headerlink" title="2.VSCode配置"></a>2.VSCode配置</h3><p>VSCode 安装完成之后，在扩展商店(打开<code>Ctrl+Shift+X</code>或者点击<img src="1.png" width="50/">安装 LaTeX Workshop 插件。<br><img src="2.png" alt></p>
 <h3 id="3-编译Tex文件"><a href="#3-编译Tex文件" class="headerlink" title="3.编译Tex文件"></a>3.编译Tex文件</h3><p>新建文件夹，如<code>latex学习</code>，新建一个<code>.tex</code>文本，输入以下代码，</p>
-<pre class="line-numbers language-latex"><code class="language-latex"><span class="token function selector">\documentclass</span><span class="token punctuation">[</span>UTF8,a6paper<span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token keyword">ctexart</span><span class="token punctuation">}</span>
+<pre class="line-numbers language-latex"><code class="language-latex"><span class="token comment" spellcheck="true">%-*- coding: UTF-8 -*-</span>
+<span class="token comment" spellcheck="true">% gougu.tex</span>
+<span class="token comment" spellcheck="true">% 勾股定理</span>
+<span class="token function selector">\documentclass</span><span class="token punctuation">[</span>UTF8<span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token keyword">ctexart</span><span class="token punctuation">}</span>
 <span class="token function selector">\usepackage</span><span class="token punctuation">{</span><span class="token keyword">graphicx</span><span class="token punctuation">}</span>
 <span class="token function selector">\usepackage</span><span class="token punctuation">{</span><span class="token keyword">float</span><span class="token punctuation">}</span>
 <span class="token function selector">\usepackage</span><span class="token punctuation">{</span><span class="token keyword">amsmath</span><span class="token punctuation">}</span>
-<span class="token function selector">\usepackage</span><span class="token punctuation">{</span><span class="token keyword">cite</span><span class="token punctuation">}</span>
 <span class="token function selector">\usepackage</span><span class="token punctuation">{</span><span class="token keyword">geometry</span><span class="token punctuation">}</span>
 <span class="token function selector">\geometry</span><span class="token punctuation">{</span>a6paper,centering,scale=0.8<span class="token punctuation">}</span>
-<span class="token function selector">\usepackage</span><span class="token punctuation">{</span><span class="token keyword">caption</span><span class="token punctuation">}</span>
+<span class="token function selector">\usepackage</span><span class="token punctuation">[</span>format=hang,font=small,textfont=it<span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token keyword">caption</span><span class="token punctuation">}</span>
 <span class="token function selector">\usepackage</span><span class="token punctuation">[</span>nottoc<span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token keyword">tocbibind</span><span class="token punctuation">}</span>
-<span class="token function selector">\newtheorem</span><span class="token punctuation">{</span>thm<span class="token punctuation">}</span><span class="token punctuation">{</span>定理<span class="token punctuation">}</span>
+
+<span class="token function selector">\newenvironment</span><span class="token punctuation">{</span>myquote<span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">quote</span><span class="token punctuation">}</span><span class="token function selector">\kaishu</span><span class="token function selector">\zihao</span><span class="token punctuation">{</span>-5<span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">quote</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token function selector">\newcommand</span><span class="token function selector">\degree</span><span class="token punctuation">{</span>^<span class="token function selector">\circ</span><span class="token punctuation">}</span>
+
 <span class="token function selector">\title</span><span class="token punctuation">{</span><span class="token function selector">\heiti</span> 杂谈勾股定理<span class="token punctuation">}</span>
-<span class="token function selector">\author</span><span class="token punctuation">{</span><span class="token function selector">\kaishu</span> 张三<span class="token punctuation">}</span>
+<span class="token function selector">\author</span><span class="token punctuation">{</span><span class="token function selector">\kaishu</span> 纸山<span class="token punctuation">}</span>
 <span class="token function selector">\date</span><span class="token punctuation">{</span><span class="token function selector">\today</span><span class="token punctuation">}</span>
 
+<span class="token function selector">\bibliographystyle</span><span class="token punctuation">{</span>plain<span class="token punctuation">}</span>
+
+<span class="token function selector">\newtheorem</span><span class="token punctuation">{</span>thm<span class="token punctuation">}</span><span class="token punctuation">{</span>定理<span class="token punctuation">}</span>
+
 <span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
-<span class="token function selector">\maketitle</span>
-<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">abstract</span><span class="token punctuation">}</span>
-这是一篇关于勾股定理的小短文。
-<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">abstract</span><span class="token punctuation">}</span>
-<span class="token function selector">\tableofcontents</span>
-<span class="token function selector">\section</span><span class="token punctuation">{</span><span class="token headline class-name">勾股定理在古代</span><span class="token punctuation">}</span>
-<span class="token function selector">\label</span><span class="token punctuation">{</span><span class="token keyword">sec:ancient</span><span class="token punctuation">}</span>
-西方称勾股定理为毕达哥拉斯定理，将勾股定理的发现归功于公元前6世纪的毕达哥拉斯学派<span class="token function selector">\cite</span><span class="token punctuation">{</span><span class="token keyword">Kline</span><span class="token punctuation">}</span>。该学派得到一个法则，可以求出可以排成直角三角形三边的三元数组。毕达哥拉斯学派没有书面著作，该定理的严格表述和证明则见于欧几里德<span class="token function selector">\footnote</span><span class="token punctuation">{</span>欧几里德，约公元前330-275年<span class="token punctuation">}</span>《几何原本》的命题47：“直角三角形斜边上的正方形等于两只脚边上的两个正方形之和。”正面是用面积做的。<span class="token function selector">\par</span>
-我国《周髀算经》载商高（约公元前12世纪）答周公问：
-<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">quote</span><span class="token punctuation">}</span>
-<span class="token function selector">\zihao</span><span class="token punctuation">{</span>-5<span class="token punctuation">}</span><span class="token function selector">\kaishu</span> 勾广三，股修四，径隅五。
-<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">quote</span><span class="token punctuation">}</span>
-又载陈子（约公元前7-6世纪）答荣方问：
-<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">quote</span><span class="token punctuation">}</span>
-<span class="token function selector">\zihao</span><span class="token punctuation">{</span>-5<span class="token punctuation">}</span><span class="token function selector">\kaishu</span> 若求邪至日者，以日下为勾，日高为股，勾股各自乘，并而开方除之，得邪至日。
-<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">quote</span><span class="token punctuation">}</span>
-都较古希腊更早。后者已经明确道出勾股定理的一般形式。图<span class="token function selector">\ref</span><span class="token punctuation">{</span><span class="token keyword">fig:gougudingli</span><span class="token punctuation">}</span>是我国古代对勾股定理的一种证明<span class="token function selector">\cite</span><span class="token punctuation">{</span><span class="token keyword">quanjing</span><span class="token punctuation">}</span>。
-<span class="token function selector">\section</span><span class="token punctuation">{</span><span class="token headline class-name">勾股定理的现代形式</span><span class="token punctuation">}</span>
-勾股定理可以用现代语言表述如下：
-<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">thm</span><span class="token punctuation">}</span><span class="token punctuation">[</span>勾股定理<span class="token punctuation">]</span>
-直角三角形斜边的平方等于两腰的平方和。<span class="token function selector">\par</span>
-可以用符号语言表述为：设直角三角形ABC,其中<span class="token function selector">\angle</span> C=<span class="token equation string">$90^<span class="token equation-command regex">\circ</span>$</span>,则有
-<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">equation</span><span class="token punctuation">}</span><span class="token equation string"><span class="token equation-command regex">\label</span>{eq:gougu}
-AB^2=BC^2+AC^2
-</span><span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">equation</span><span class="token punctuation">}</span>
-<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">thm</span><span class="token punctuation">}</span>
-满足式<span class="token function selector">\eqref</span><span class="token punctuation">{</span>eq:gougu<span class="token punctuation">}</span>的整数称为<span class="token function selector">\emph</span><span class="token punctuation">{</span>勾股数<span class="token punctuation">}</span>。第<span class="token function selector">\ref</span><span class="token punctuation">{</span><span class="token keyword">sec:ancient</span><span class="token punctuation">}</span>节所说毕达哥拉斯学派得到的三元数组就是勾股数。下表列出了一些较小的勾股数：
-<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">table</span><span class="token punctuation">}</span><span class="token punctuation">[</span>H<span class="token punctuation">]</span>
-<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">tabular</span><span class="token punctuation">}</span><span class="token punctuation">{</span>|rrr|<span class="token punctuation">}</span>
-<span class="token function selector">\hline</span>
-直角边<span class="token equation string">$a$</span>  <span class="token punctuation">&amp;</span>  直角边<span class="token equation string">$b$</span>  <span class="token punctuation">&amp;</span>  直角边<span class="token equation string">$c$</span><span class="token function selector">\\</span>
-<span class="token function selector">\hline</span>
-3<span class="token punctuation">&amp;</span>4<span class="token punctuation">&amp;</span>5<span class="token function selector">\\</span>
-5<span class="token punctuation">&amp;</span>12<span class="token punctuation">&amp;</span>13<span class="token function selector">\\</span><span class="token function selector">\hline</span>
-<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">tabular</span><span class="token punctuation">}</span>
-<span class="token function selector">\qquad</span>
-(<span class="token equation string">$a^2+b^2=c^2$</span>)
-<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">table</span><span class="token punctuation">}</span>
-<span class="token function selector">\nocite</span><span class="token punctuation">{</span>Shiye<span class="token punctuation">}</span>
-<span class="token function selector">\bibliography</span><span class="token punctuation">{</span>math<span class="token punctuation">}</span>
-<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+    <span class="token function selector">\maketitle</span>
+    <span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">abstract</span><span class="token punctuation">}</span>
+        这是一篇关于勾股定理的小短文。
+    <span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">abstract</span><span class="token punctuation">}</span>
+    <span class="token function selector">\tableofcontents</span>
+    <span class="token function selector">\section</span><span class="token punctuation">{</span><span class="token headline class-name">勾股定理在古代</span><span class="token punctuation">}</span><span class="token function selector">\label</span><span class="token punctuation">{</span><span class="token keyword">sec:diyijie</span><span class="token punctuation">}</span>
+    西方称勾股定理为毕达哥拉斯定理，将勾股定理的发现归功于公元前 6 世纪的毕达哥拉斯学派 <span class="token function selector">\cite</span><span class="token punctuation">{</span><span class="token keyword">Kline</span><span class="token punctuation">}</span>。该学派得到了一个法则，可以求出可排成直角三角形三边的三元数组。毕达哥拉斯学派没有书面著作，该定理的严格表述和证明则见于欧几里德<span class="token function selector">\footnote</span><span class="token punctuation">{</span>欧几里得，约公元前 330--275 年。<span class="token punctuation">}</span>《几何原本》的命题 47：“直角三角形斜边上的正方形等于两直角边上的两个正方形之和。 ” 证明是用面积做的。
+
+    我国《周髀算经》载商高（约公元前 12 世纪）答周公问：
+    <span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">myquote</span><span class="token punctuation">}</span>
+        勾广三，股修四，径隅五。
+    <span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">myquote</span><span class="token punctuation">}</span>
+    又载陈子（约公元前 7--6 世纪）答荣方问：
+    <span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">myquote</span><span class="token punctuation">}</span>
+        若求邪至日者，以日下为勾，日高为股，勾股各自乘，并而开方除之，得邪至日。
+    <span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">myquote</span><span class="token punctuation">}</span>
+    都较古希腊更早。后者已经明确道出勾股定理的一般形式。
+
+    <span class="token function selector">\section</span><span class="token punctuation">{</span><span class="token headline class-name">勾股定理的近代形式</span><span class="token punctuation">}</span>
+    勾股定理可以用现代语言表述如下：
+    <span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">thm</span><span class="token punctuation">}</span><span class="token punctuation">[</span>勾股定理<span class="token punctuation">]</span>
+        直角三角形斜边的平方等于两腰的平方和。
+    <span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">thm</span><span class="token punctuation">}</span>
+
+    可以用符号语言表述为：设直角三角形<span class="token equation string">$ABC$</span>，其中<span class="token equation string">$<span class="token equation-command regex">\angle</span> C = 90<span class="token equation-command regex">\degree</span>$</span>，则有
+    <span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">equation</span><span class="token punctuation">}</span><span class="token equation string"><span class="token equation-command regex">\label</span>{eq:gougu}
+    AB^2 = BC^2 + AC^2.
+    </span><span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">equation</span><span class="token punctuation">}</span>
+    满足式<span class="token function selector">\eqref</span><span class="token punctuation">{</span>eq:gougu<span class="token punctuation">}</span>的整数称为<span class="token function selector">\emph</span><span class="token punctuation">{</span>勾股数<span class="token punctuation">}</span>。第<span class="token function selector">\ref</span><span class="token punctuation">{</span><span class="token keyword">sec:diyijie</span><span class="token punctuation">}</span>节所说毕达哥拉斯学派得到的三元数组就是勾股数。下表列出一些较小的勾股数：
+    <span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">table</span><span class="token punctuation">}</span><span class="token punctuation">[</span>H<span class="token punctuation">]</span>
+        <span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">tabular</span><span class="token punctuation">}</span><span class="token punctuation">{</span>|rrr|<span class="token punctuation">}</span>
+            <span class="token function selector">\hline</span>
+            直角边 <span class="token equation string">$a$</span> <span class="token punctuation">&amp;</span> 直角边 <span class="token equation string">$b$</span> <span class="token punctuation">&amp;</span> 斜边 <span class="token equation string">$c$</span> <span class="token function selector">\\</span>
+            <span class="token function selector">\hline</span>
+            3 <span class="token punctuation">&amp;</span> 4 <span class="token punctuation">&amp;</span> 5 <span class="token function selector">\\</span>
+            5 <span class="token punctuation">&amp;</span> 12 <span class="token punctuation">&amp;</span> 13 <span class="token function selector">\\</span>
+            <span class="token function selector">\hline</span>
+        <span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">tabular</span><span class="token punctuation">}</span><span class="token comment" spellcheck="true">%</span>
+        <span class="token function selector">\qquad</span>
+        (<span class="token equation string">$a^2 + b^2 = c^2$</span>)
+    <span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">table</span><span class="token punctuation">}</span>
+    <span class="token function selector">\nocite</span><span class="token punctuation">{</span>Shiye<span class="token punctuation">}</span>
+    <span class="token function selector">\bibliography</span><span class="token punctuation">{</span>math<span class="token punctuation">}</span>
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>然后<code>Ctrl+Alt+X</code>或者点击<img src="3.png" width="50/">打开LaTeX面板编译<br><img src="4.png" width="300/"><br>编译成功会会出现很多文件，其中包括<code>.pdf</code>文件，可以用以下方式方便浏览<br><img src="5.png" width="300/"></p>
 
             </div>
@@ -507,6 +523,28 @@ AB^2=BC^2+AC^2
         </div>
     </div>
 
+    
+    <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '8cd6a000d27aad085519',
+        clientSecret: 'b81cc3ed709f1159f66398376590e79f2a9c87fa',
+        repo: 'XingyuZhang2018.github.io',
+        owner: 'XingyuZhang2018',
+        admin: "XingyuZhang2018",
+        id: '2019/10/27/texlive-vscode-pei-zhi/',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
     
 
     
@@ -780,7 +818,7 @@ Visual Studio Code（简称VS Code）是一个由微软开发，同时支持Wind
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">4.8k</span>
+            <span class="white-color">4.9k</span>
             
 
             <br>

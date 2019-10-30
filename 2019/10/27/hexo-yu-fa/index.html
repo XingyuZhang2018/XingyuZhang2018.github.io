@@ -356,7 +356,7 @@ hexo n &#34;my blog&#34;">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    447
+                    452
                 </div>
                 
 
@@ -393,7 +393,8 @@ top: 是否置顶
 toc: 是否开启目录
 tags: 标签
 categories: 分类
-mathjax: 是否开启数学公式输入<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+summary：文章摘要
+mathjax: 是否开启数学公式输入<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>当一篇文章有多个标签时，用中括号包含多个标签</p>
 <pre class="line-numbers language-hexo"><code class="language-hexo">tags: [标签1,标签2,标签3]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="网站内超链接"><a href="#网站内超链接" class="headerlink" title="网站内超链接"></a>网站内超链接</h3><pre class="line-numbers language-hexo"><code class="language-hexo">{% post_link Markdown语法 Markdown语法的超链接 %}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -467,6 +468,28 @@ mathjax: 是否开启数学公式输入<span aria-hidden="true" class="line-numb
         </div>
     </div>
 
+    
+    <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '8cd6a000d27aad085519',
+        clientSecret: 'b81cc3ed709f1159f66398376590e79f2a9c87fa',
+        repo: 'XingyuZhang2018.github.io',
+        owner: 'XingyuZhang2018',
+        admin: "XingyuZhang2018",
+        id: '2019/10/27/hexo-yu-fa/',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
     
 
     
@@ -744,7 +767,7 @@ mathjax: 是否开启数学公式输入<span aria-hidden="true" class="line-numb
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">4.8k</span>
+            <span class="white-color">4.9k</span>
             
 
             <br>
