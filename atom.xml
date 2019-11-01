@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xn--3ds27ck5co6e.com/"/>
-  <updated>2019-10-30T14:15:35.899Z</updated>
+  <updated>2019-11-01T06:41:18.980Z</updated>
   <id>http://xn--3ds27ck5co6e.com/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>有限群的线性表示理论</title>
+    <link href="http://xn--3ds27ck5co6e.com/2019/10/31/you-xian-qun-de-xian-xing-biao-shi-li-lun/"/>
+    <id>http://xn--3ds27ck5co6e.com/2019/10/31/you-xian-qun-de-xian-xing-biao-shi-li-lun/</id>
+    <published>2019-10-31T06:42:48.000Z</published>
+    <updated>2019-11-01T06:41:18.980Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;有限群的线性表示理论&quot;&gt;&lt;a href=&quot;#有限群的线性表示理论&quot; class=&quot;headerlink&quot; title=&quot;有限群的线性表示理论&quot;&gt;&lt;/a&gt;有限群的线性表示理论&lt;/h1&gt;&lt;p&gt;最近在学群论，感觉老师上课为了让200个的同学都听懂，讲得太慢了=
+        
+      
+    
+    </summary>
+    
+      <category term="物理" scheme="http://xn--3ds27ck5co6e.com/categories/%E7%89%A9%E7%90%86/"/>
+    
+    
+      <category term="群论" scheme="http://xn--3ds27ck5co6e.com/tags/%E7%BE%A4%E8%AE%BA/"/>
+    
+      <category term="表示理论" scheme="http://xn--3ds27ck5co6e.com/tags/%E8%A1%A8%E7%A4%BA%E7%90%86%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>支持向量机（一）</title>
     <link href="http://xn--3ds27ck5co6e.com/2019/10/30/zhi-chi-xiang-liang-ji-yi/"/>
     <id>http://xn--3ds27ck5co6e.com/2019/10/30/zhi-chi-xiang-liang-ji-yi/</id>
     <published>2019-10-30T08:57:08.000Z</published>
-    <updated>2019-10-30T14:15:35.899Z</updated>
+    <updated>2019-10-31T07:37:56.364Z</updated>
     
     <summary type="html">
     
