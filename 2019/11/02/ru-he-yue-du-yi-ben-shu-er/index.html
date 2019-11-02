@@ -4,12 +4,12 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="支持向量机（一）, 兴宇的Wiki">
+    <meta name="keywords" content="《如何阅读一本书》（二）, 兴宇的Wiki">
     <meta name="baidu-site-verification" content="sn35HNA2iv">
     <meta name="google-site-verification" content="sn35HNA2iv">
     <meta name="360-site-verification" content>
-    <meta name="description" content="支持向量机（一）支持向量机（Support Vector Machine）以前在吴恩达的机器学习课上也学习过，但是只是懂基本原理和代码，这里把算法的来龙去脉讲清楚一点。本篇含有大量公式，可能需要较长时间渲染。
-线性可分系统转化为二次凸问题对">
+    <meta name="description" content="《如何阅读一本书》（二）阅读的层次阅读就像非辅助的自我发现学习，跟着一位缺席的老师学习，只有我们知道如何去读时，我们才能可能真正读懂。但是在增进阅读的技巧之前，一定要先了解阅读的层次，因为层次不同所需的技巧不同。
+阅读有四个层次，是渐进的，">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>支持向量机（一） | 兴宇的Wiki</title>
+    <title>《如何阅读一本书》（二） | 兴宇的Wiki</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -196,13 +196,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        支持向量机（一）
+                        《如何阅读一本书》（二）
                     </div>
                 </div>
             </div>
@@ -313,12 +313,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/SVM/" target="_blank">
-                            <span class="chip bg-color">SVM</span>
-                        </a>
-                        
-                        <a href="/tags/模式识别/" target="_blank">
-                            <span class="chip bg-color">模式识别</span>
+                        <a href="/tags/思维技巧/" target="_blank">
+                            <span class="chip bg-color">思维技巧</span>
                         </a>
                         
                     </div>
@@ -329,8 +325,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/算法/" class="post-category" target="_blank">
-                            算法
+                        <a href="/categories/读书笔记/" class="post-category" target="_blank">
+                            读书笔记
                         </a>
                         
                     </div>
@@ -341,7 +337,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-10-30
+                    2019-11-02
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -355,14 +351,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    979
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    3 分
                 </div>
                 
                 
@@ -373,12 +369,25 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="支持向量机（一）"><a href="#支持向量机（一）" class="headerlink" title="支持向量机（一）"></a>支持向量机（一）</h1><p>支持向量机（Support Vector Machine）以前在<a href="https://www.coursera.org/learn/machine-learning?" target="_blank" rel="noopener">吴恩达的机器学习课</a>上也学习过，但是只是懂基本原理和代码，这里把算法的来龙去脉讲清楚一点。本篇含有大量公式，可能需要较长时间渲染。</p>
-<h2 id="线性可分系统"><a href="#线性可分系统" class="headerlink" title="线性可分系统"></a>线性可分系统</h2><h3 id="转化为二次凸问题"><a href="#转化为二次凸问题" class="headerlink" title="转化为二次凸问题"></a>转化为二次凸问题</h3><p>对于一个线性可分系统，我们可以直接用一条直线分开，判别函数为：<br>\begin{align}<br>f_{\omega, b}(x)=sign\left(\omega^{T} x+b\right)<br>\end{align}<br>但是可能有多条直线都能分开，当然选择“分得最开”的直线，那怎么描述分得最开呢？这里用“留白”（Margin）来描述，例如图1，黑线Margin最大，则黑线为最佳选择。<br><img src="1.png" width="300" alt="图1"><br>用$\gamma$来表示数据点到直线的距离的最小值，即Margin边缘到直线的距离，则我们需要优化<br>\begin{array}{l}<br>{\max\limits_{\gamma, \omega, b} \gamma} \\ {\text { s.t. } y^{(i)}\left(\frac{\omega^{T}}{|\omega|_{2}} x^{(i)}+\frac{b}{|\omega|_{2}}\right) \geq \gamma, i=1, \cdots, n}<br>\end{array}<br>然后转化为一个二次凸问题：<br>\begin{array}{ll}<br>{\min\limits_{\omega, b}} &amp; {\frac{1}{2}|\omega|_{2}^{2}} \\ {\text { s.t. }} &amp; {y^{(i)}\left(\omega^{T} x^{(i)}+b\right) \geq 1, i=1, \cdots, n}<br>\end{array}<br>从这里我们就可以看到为什么该算法要被称为Support Vector，所有在Margin边缘的点都满足$y\left(\omega^{T} x+b\right)=1$，Margin仅仅由这些点“支持出来”，与其他点无关。<br><img src="2.png" width="300" alt="图2"></p>
-<h3 id="含不等式的拉格朗日乘子法"><a href="#含不等式的拉格朗日乘子法" class="headerlink" title="含不等式的拉格朗日乘子法"></a>含不等式的拉格朗日乘子法</h3><p>下面我们会对上述二次凸问题再一次转化，需要用到含不等式的拉格朗日乘子法。对于含不等式的优化问题：<br>\begin{array}{ll}<br>{\min\limits_{\omega}} &amp; {f(\omega)} \\ {\text { s.t. }} &amp; {g_{i}(\omega) \leq 0, i=1, \cdots, k} \\ {} &amp; {h_{i}(\omega)=0, i=1, \cdots, l}<br>\end{array}<br>拉格朗日量为：（这里限定$\alpha_i \geq 0$）<br>\begin{align}<br>L(\omega, b)=f(\omega)+\sum_{i=1}^{k} \alpha_{i} g_{i}(\omega)+\sum_{i=1}^{l} \beta_{i} h_{i}(\omega)<br>\end{align}<br>在优化过程中由于取最小最大值顺序会出现不同的极值：<br>\begin{align}<br>d^{*}=\max _{\alpha, \beta: \alpha_{i} \geq 0} \min _{\omega} L(\omega, \alpha, \beta) \leq \min _{\omega} \max _{\alpha, \beta: \alpha_{i} \geq 0} L(\omega, \alpha, \beta)=p^{*}<br>\end{align}<br>当$d^{*}=p^{*}$时，$\omega^{*}, \alpha^{*}, \beta^{*}$需要满足Karush-Kuhn-Tucker(KKT)条件<br>\begin{align}<br>\begin{aligned} \frac{\partial}{\partial \omega_{i}} L\left(\omega^{*}, \alpha^{*}, \beta^{*}\right) &amp;=0, i=1, \cdots, M \\ \frac{\partial}{\partial \beta_{i}} L\left(\omega^{*}, \alpha^{*}, \beta^{*}\right) &amp;=0, i=1, \cdots, l \\ \alpha_{i}^{*} g_{i}\left(\omega^{*}\right) &amp;=0, i=1, \cdots, k, \text {KKT互补松弛条件} \\ g_{i}\left(\omega^{*}\right) &amp; \leq 0, i=1, \cdots, k, \\ \alpha_{i}^{*} &amp; \geq 0, i=1, \cdots, k \end{aligned}<br>\end{align}<br>其中只有KKT互补松弛条件是额外要求添加的。</p>
-<h3 id="用拉格朗日乘子法转化"><a href="#用拉格朗日乘子法转化" class="headerlink" title="用拉格朗日乘子法转化"></a>用拉格朗日乘子法转化</h3><p>这样，我们将之前优化问题的拉格朗日量写为：<br>\begin{align}<br>L(\omega, b, \alpha)=\frac{1}{2}|\omega|_{2}^{2}-\sum_{i=1}^{n} \alpha_{i}\left[y^{(i)}\left(\omega^{T} x^{(i)}+b\right)-1\right]<br>\end{align}<br>对原始优化问题再一次转化为：<br>\begin{align}<br>\begin{aligned} \max _{\alpha} &amp; \sum_{i=1}^{n} \alpha_{i}-\frac{1}{2} \sum_{i, j=1}^{n} y^{(i)} y^{(j)} \alpha_{i} \alpha_{j}\left(x^{(i)}\right)^{T} x^{(j)} \\ \text { s.t. } &amp; \alpha_{i} \geq 0, i=1, \cdots, n \\ &amp; \sum_{i=1}^{n} \alpha_{i} y^{(i)}=0 \end{aligned}<br>\end{align}<br>最佳参数为：<br>\begin{align}<br>\omega^{*}=\sum_{i=1}^{n} \alpha_{i}^{*} y^{(i)} x^{(i)}, b^{*}=y^{(j)}-\sum_{i=1}^{n} \alpha_{i}^{*} y^{(i)}\left(x^{(i)}\right)^{T} x^{(j)}<br>\end{align}<br>注意到只有支持向量点$\alpha_i &gt; 0$，对$\omega^{*}$才有贡献</p>
-<h2 id="非线性可分系统"><a href="#非线性可分系统" class="headerlink" title="非线性可分系统"></a>非线性可分系统</h2><p>当系统线性不可分时，如图3所示，红点中出现一个绿点，<br><img src="3.png" width="300" alt="图3"><br>对于这种明显分错情况，我们可以添加容许分错的松弛（Slack）变量$\xi_{i}$，代表分错数据点到Margin边缘的距离。<br><img src="4.png" width="300" alt="图4"><br>则优化问题变为：<br>\begin{align}<br>\begin{array}{ll}{\min\limits_{\omega, b}} &amp; {\frac{1}{2}|\omega|_{2}^{2}+C \sum_{i=1}^{n} \xi_{i}} \\ {\text { s.t. }} &amp; {y^{(i)}\left(\omega^{T} x^{(i)}+b\right) \geq 1-\xi_{i}, \quad i=1, \cdots, n} \\ {} &amp; {\xi_{i} \geq 0, \quad i=1, \cdots, n}\end{array}<br>\end{align}<br>这里参数C代表了模型对错误分类的容许程度，当C越小时容许程度越高。进行同样的第二次转换，得到新的优化问题：<br>\begin{align}<br>\begin{array}{ll}{\max\limits_{\alpha}} &amp; {\sum_{i=1}^{n} \alpha_{i}-\frac{1}{2} \sum_{i, j=1}^{n} y^{(i)} y^{(j)} \alpha_{i} \alpha_{j}\left(x^{(i)}\right)^{T} x^{(j)}} \\ {\text { s.t. }} &amp; {0 \leq \alpha_{i} \leq C, i=1, \cdots, n} \\ {} &amp; {\sum_{i=1}^{n} \alpha_{i} y^{(i)}=0}\end{array}<br>\end{align}<br>最优参数形式不变：<br>\begin{align}<br>\omega^{*}=\sum_{i=1}^{n} \alpha_{i}^{*} y^{(i)} x^{(i)}, b^{*}=y^{(j)}-\sum_{i=1}^{n} \alpha_{i}^{*} y^{(i)}\left(x^{(i)}\right)^{T} x^{(j)}<br>\end{align}<br>由KKT给出的互补松弛条件为：<br>\begin{align}<br>\alpha_{i}^{*}\left[y^{(i)}\left(w^{* T} x^{(i)}+b\right)-1+\xi_{i}\right]=0, \eta_{i}^{*} \xi_{i}=0<br>\end{align}<br>于是，可以看出$\alpha_{i}^{*}=0$时在正确的一边，$0&lt;\alpha_{i}^{*}&lt; C$为在Margin边界上，$0&lt;\alpha_{i}^{*}= C$在错误的一边。</p>
-<h2 id="SVM的损失函数"><a href="#SVM的损失函数" class="headerlink" title="SVM的损失函数"></a>SVM的损失函数</h2><p>对于分错的才有损失，所以损失函数里第一项只取正的部分，称为Hinge Loss Function，第二项为正则项。<br>\begin{align}<br>\min _{\omega, b} \sum_{i=1}^{n}\left[1-y^{(i)}\left(\omega^{T} x^{(i)}+b\right)\right]_{+}+\lambda|\omega|_{2}^{2}<br>\end{align}<br>图5红线为原本的损失函数，绿线则为Hinge Loss Function，可以用来凸优化，这种思想在现代很多优化问题都有用到，如图6所示。<br><img src="5.png" width="300" alt="图5"><br><img src="6.png" width="300" alt="图6"></p>
+                <h1 id="《如何阅读一本书》（二）阅读的层次"><a href="#《如何阅读一本书》（二）阅读的层次" class="headerlink" title="《如何阅读一本书》（二）阅读的层次"></a>《如何阅读一本书》（二）阅读的层次</h1><p>阅读就像非辅助的自我发现学习，跟着一位缺席的老师学习，只有我们知道如何去读时，我们才能可能真正读懂。但是在增进阅读的技巧之前，一定要先了解阅读的层次，因为层次不同所需的技巧不同。</p>
+<p>阅读有四个层次，是渐进的，但是更高层次包含着低层次，第一层次的阅读并没有在第二层次的阅读中消失，第二层又包含在第三层中，第三层又在第四层中。</p>
+<h2 id="基础阅读"><a href="#基础阅读" class="headerlink" title="基础阅读"></a>基础阅读</h2><p>第一层次的阅读称为基础阅读。熟练这个层次的阅读，认识字并且明白在说什么，学习到阅读的基本艺术，接受基础的阅读训练，获得初步的阅读技巧，通常在小学完成。</p>
+<blockquote>
+<p>“小孩子首先接触的就是这个层次的阅读。他的问题（也是我们开始阅读时的问题）是要如何认出一页中的一个个字。孩子看到的是白纸上的一堆黑色符号（或是黑板上的白色符号一一如果他是从黑板上认字的话），而这些黑色符号代表着:”猫坐在帽子上。”一年级的孩子并不真的关心猫是不是坐在帽子上，或是这句话对猫、帽子或整个世界有什么意义。他关心的只是写这句话的人所用的语言。”</p>
+</blockquote>
+<p>对于大部分读者来说这个层次的技巧在多年前就学会了，除非遇到外国文字，需要搞懂每个字的意思后才能明白说了什么。</p>
+<h2 id="检视阅读"><a href="#检视阅读" class="headerlink" title="检视阅读"></a>检视阅读</h2><p>第二层次的阅读称为检视阅读。当限定时间阅读时，我们会略读或预读，以求得明白书的大致框架，感受总体轮廓。从表面上观察一本书，学习到表面的东西。</p>
+<blockquote>
+<p>“我们想要强调的是，大多数人，即使是许多优秀的阅读者，都忽略了检视阅读的价值。他们打开一本书，从第一页开始读起，孜孜不倦，甚至连目录都不看一眼。因此，他们在只需要粗浅翻阅一本书的时候，却拿出了仔细阅读、理解一本书的时间。这就加重了阅读的困难。”</p>
+</blockquote>
+<h2 id="分析阅读"><a href="#分析阅读" class="headerlink" title="分析阅读"></a>分析阅读</h2><p>第三层次的阅读称为分析阅读。分析阅读时全盘完整的阅读。对于获取资讯不需要分析阅读，分析阅读是追求理解的。</p>
+<blockquote>
+<p>“我们要在这里强调的是，分析阅读永远是一种专注的活动。在这个层次的 阅读中，读者会紧抓住·本书 这个比喻蛮恰当的 一直要读到这本书成为他自己为止。弗兰西斯·培根曾经说过：‘有些书可以浅尝即止，有在些书是要生吞活剥，只有少数的书是要咀嚼与消化的。’分析阅读就是要咀嚼与消化一本书。”</p>
+</blockquote>
+<h2 id="理解阅读"><a href="#理解阅读" class="headerlink" title="理解阅读"></a>理解阅读</h2><p>第四层次的阅读称为主题阅读。主题阅读要求读者读一系列的书，以达到对某个主题的理解。不轻松也是获益最多的。</p>
+<blockquote>
+<p>“在做主题阅读时，阅读者会读很多书，而不是一本书，并列举出这些书之间相关之处，提出一个所有的书都谈到的主题。但只是书本字里行间的比较还不够。主题阅读涉及的远不止此。借助他所阅读的书籍，主题阅读者要能够架构出一个可能在哪一本书里都没提过的主题分析。因此，很显然的，主题阅读是最主动、也最花力气的一种阅读。”</p>
+</blockquote>
 
             </div>
             <hr />
@@ -413,9 +422,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《支持向量机（一）》
+                    《《如何阅读一本书》（二）》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/30/zhi-chi-xiang-liang-ji-yi/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/11/02/ru-he-yue-du-yi-ben-shu-er/" property="cc:attributionName"
                rel="cc:attributionURL">
                 张兴宇
             </a> 采用
@@ -456,7 +465,7 @@
         repo: 'XingyuZhang2018.github.io',
         owner: 'XingyuZhang2018',
         admin: "XingyuZhang2018",
-        id: '2019/10/30/zhi-chi-xiang-liang-ji-yi/',
+        id: '2019/11/02/ru-he-yue-du-yi-ben-shu-er/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -739,9 +748,61 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2019/11/02/ru-he-yue-du-yi-ben-shu-er/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="《如何阅读一本书》（二）">
+                        
+                        <span class="card-title">《如何阅读一本书》（二）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            《如何阅读一本书》（二）阅读的层次阅读就像非辅助的自我发现学习，跟着一位缺席的老师学习，只有我们知道如何去读时，我们才能可能真正读懂。但是在增进阅读的技巧之前，一定要先了解阅读的层次，因为层次不同所需的技巧不同。
+阅读有四个层次，是渐进的，
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/读书笔记/" class="post-category" target="_blank">
+                                    读书笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/思维技巧/" target="_blank">
+                        <span class="chip bg-color">思维技巧</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2019/10/31/you-xian-qun-de-xian-xing-biao-shi-li-lun/">
                     <div class="card-image">
@@ -759,9 +820,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-31
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -783,55 +844,6 @@
                     
                     <a href="/tags/表示理论/" target="_blank">
                         <span class="chip bg-color">表示理论</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/10/30/ru-he-yue-du-yi-ben-shu-yi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="《如何阅读一本书》（一）">
-                        
-                        <span class="card-title">《如何阅读一本书》（一）</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            《如何阅读一本书》（一）阅读的活力与艺术为什么要阅读这本书？在现在信息繁多的时代我们可以轻易在网络上获得各种信息，技巧和思考结论，那么传统的书籍内容多，杂，还有阅读的必要吗？我觉得是有的，书籍中有的是思考过程，对形成自己独立的思维模式帮助很
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-30
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/读书笔记/" class="post-category" target="_blank">
-                                    读书笔记
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/思维技巧/" target="_blank">
-                        <span class="chip bg-color">思维技巧</span>
                     </a>
                     
                 </div>
