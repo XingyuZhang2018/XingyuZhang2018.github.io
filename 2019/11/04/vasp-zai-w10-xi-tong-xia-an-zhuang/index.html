@@ -316,6 +316,14 @@
                             <span class="chip bg-color">VASP</span>
                         </a>
                         
+                        <a href="/tags/Linux/" target="_blank">
+                            <span class="chip bg-color">Linux</span>
+                        </a>
+                        
+                        <a href="/tags/WSL/" target="_blank">
+                            <span class="chip bg-color">WSL</span>
+                        </a>
+                        
                     </div>
                     
                 </div>
@@ -350,7 +358,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    2k
                 </div>
                 
 
@@ -374,7 +382,7 @@
 <li>平台和软件准备<ul>
 <li>版本1607之后的64位版本的Windows 10（2016年以后都支持了~）</li>
 <li><a href="https://software.intel.com/en-us/parallel-studio-xe/choose-download/student-linux-fortran" target="_blank" rel="noopener">Intel Parallel Studio XE教育版</a>，用学校邮箱注册，<del>很快就能在垃圾箱里收到邮件了</del>，下载18M的<code>.tgz</code>文件（别下完整版，我们用不到那么多依赖），并记录安装序列号，不解压（可见牙膏厂给我国高校发了多少广告）</li>
-<li><a href="https://pan.baidu.com/s/1kuujmg9f-PimBmkkPmjgBw" target="_blank" rel="noopener">VASP 5.4.4及其POT包压缩包</a>（密码：incv，仅供学习参考用途，只解压一次，得到两个压缩包）</li>
+<li><a href="https://pan.baidu.com/s/1kuujmg9f-PimBmkkPmjgBw" target="_blank" rel="noopener">VASP 5.4.4及其POT包压缩包</a>（密码：incv，仅供学习参考用途，解压得到两个压缩包，其中POT.txz再解压一次，vasp.5.4.4.tar.gz不用解压）</li>
 <li><a href="https://notepad-plus-plus.org/downloads/" target="_blank" rel="noopener">Notepad++</a>（会用Linux系统下vi可以不用，新手推荐）</li>
 </ul>
 </li>
@@ -391,7 +399,7 @@
 <p>注意事项</p>
 <ul>
 <li>Linux子系统的默认安装位置为<code>C:\Users\你w10用户名\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs</code>，建议创建快捷方式，后面会经常用到，以后用<code>你Linux安装地址</code>指代。<font color="#dd0000">w10下载的安装包千万别直接移到这里，不然Linux系统会识别不到。</font><br></li>
-<li>Linux下的文件<font color="#dd0000">千万不要用w10自带的记事本、写字板打开，</font><br>右键用Notepad++打开编辑。因为w10和Linux换行格式不同。</li>
+<li>Linux下的文件<font color="#dd0000">千万不要用w10自带的记事本、写字板打开，</font><br>右键用Notepad++打开编辑。因为w10和Linux换行格式不同。不小心用w10笔记本打开了，请用Notepad++转化为Linux格式。</li>
 </ul>
 </blockquote>
 <p><del>为增加下载速度，更换国内源。用Notepad++打开<code>你Linux安装地址\etc\apt\sources.list</code>，删除所有内容，加上下面科大源</del>发现使用国内源会报错，还没找到没有解决方法，大家还是科学上网吧= =</p>
@@ -432,57 +440,57 @@ which icc ifort icpc mpiifort <span aria-hidden="true" class="line-numbers-rows"
 <p>若提示<code>xxx:command not found</code>，再执行一遍上述命令，没有提示即完成，关闭Shell。</p>
 <ol start="3">
 <li>然后进入<code>你Linux安装地址\opt\intel\compilers_and_libraries_2019.5.281\linux\mkl\interfaces\fftw3xf</code>，同时按住<code>Shift</code>鼠标右键，打开Linux Shell，一条条执行，第一条是进入root用户，需要输入你的用户名密码。第二条编译完退出Shell，该目录下出现文件：<code>libfftw3xf_intel.a</code><pre class="line-numbers language-linux"><code class="language-linux">sudo su
-make libintel64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+source /home/你Linux用户名/.bashrc 
+make libintel64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 </li>
 </ol>
 <h2 id="安装VASP"><a href="#安装VASP" class="headerlink" title="安装VASP"></a>安装VASP</h2><ol>
-<li>在你解压好得VASP两个压缩包的目录下，按住<code>Shift</code>鼠标右键，打开Ubuntu Shell一条条执行下面命令，</li>
+<li>在你解压好得VASP两个压缩包的目录下，按住<code>Shift</code>鼠标右键，打开Linux Shell一条条执行下面命令，</li>
 </ol>
 <pre class="line-numbers language-linux"><code class="language-linux">tar -xzvf vasp.5.4.4.tar.gz
-tar -xzvf POT.txz
 cd vasp.5.4.4
-cp arch/makefile.include.linux_intel makefile.include<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>得到<code>makefile.include</code>文件，<font color="#dd0000">千万不要用w10自带的记事本、写字板打开，</font><br>右键用Notepad++打开，修改以下内容</p>
+cp arch/makefile.include.linux_intel makefile.include<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>得到<code>makefile.include</code>文件，<font color="#dd0000">千万不要用w10自带的记事本、写字板打开，</font><br>右键用Notepad++打开，添加一行：</p>
 <pre><code>MKLROOT    = /opt/intel/compilers_and_libraries_2019.5.281/linux/mkl
 MKL_PATH   = $(MKLROOT)/lib/intel64
 BLAS       =
 LAPACK     =
 BLACS      = -lmkl_blacs_intelmpi_lp64
-SCALAPACK  = $(MKL_PATH)/libmkl_scalapack_lp64.a $(BLACS)</code></pre><pre><code>OBJECTS    = fftmpiw.o fftmpi_map.o fft3dlib.o fftw3d.o \
+SCALAPACK  = $(MKL_PATH)/libmkl_scalapack_lp64.a $(BLACS)</code></pre><p>修改以下内容：</p>
+<pre><code>OBJECTS    = fftmpiw.o fftmpi_map.o fft3dlib.o fftw3d.o \
            $(MKLROOT)/interfaces/fftw3xf/libfftw3xf_intel.a</code></pre><ol start="2">
 <li><p>然后执行开始编译</p>
 <pre class="line-numbers language-Linux"><code class="language-Linux">make all<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>大概30分钟左右会完成编译，关闭Shell，在bin文件夹中会生成三个文件<code>vasp_gam  vasp_ncl  vasp_std</code></p>
 </li>
 <li><p>最后添加环境变量，在<code>你Linux安装地址/home/你Linux用户名/.bashrc</code>中添加以下内容，<font color="#dd0000">千万不要用w10自带的记事本、写字板打开，</font><br>右键用Notepad++打开。</p>
-<pre><code>export PATH=/home/你的Linux用户名/soft/vasp:$PATH</code></pre></li>
+<pre><code>export PATH=/home/你的Linux用户名/vasp:$PATH</code></pre></li>
 </ol>
-<p>打开Shell，一条条执行以代码</p>
-<pre class="line-numbers language-linux"><code class="language-linux">cd
-mkdir ~/soft/vasp
-cd ~/soft/vasp
+<p>在Linux环境下创建VASP的快捷方式，打开Shell，一条条执行以代码</p>
+<pre class="line-numbers language-linux"><code class="language-linux">mkdir vasp
+cd vasp
 ln -s /你安装vasp的位置/vasp.5.4.4/build/gam/vasp vasp_gam
 ln -s /你安装vasp的位置/vasp.5.4.4/build/ncl/vasp vasp_ncl
 ln -s /你安装vasp的位置/vasp.5.4.4/build/std/vasp vasp_std
 cd
-source .bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+source ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="运行VASP检查安装"><a href="#运行VASP检查安装" class="headerlink" title="运行VASP检查安装"></a>运行VASP检查安装</h2><p>以计算氧原子为例，新建一个工作文件夹，用Notepad++新建三个文件，<code>INCAR</code>，<code>KPOINTS</code>，<code>POSCAR</code>，内容分别为</p>
-<pre class="line-numbers language-linux"><code class="language-linux">SYSTEM = H atom       # 氧元素符号，不是零!
-ISMEAR = 0            # 是零，不是氧元素符号，对于分子或者原子，用0.
-SIGMA = 0.01          # 对于分子或者原子，用0.01<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-linux"><code class="language-linux">K-POINTS      #  第一行随便写都行，但不能没有
- 0             # 零，格子自动生成
-Gamma         #  gamma点centered 
-1 1 1         #  1*1*1格子
-0 0 0         #  S1 S2 S3， 一般保持 0 0 0 不变。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-linux"><code class="language-linux">SYSTEM = O atom
+ISMEAR = 0
+SIGMA = 0.01<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-linux"><code class="language-linux">K-POINTS
+ 0
+Gamma
+1 1 1
+0 0 0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-linux"><code class="language-linux">O atom in a box 
-1.0             # universal scaling parameters 
-8.0 0.0 0.0     # lattice vector a(1) 
-0.0 8.0 0.0     # lattice vector a(2)  
-0.0 0.0 8.0     # lattice vector a(3)  
-1               # number of atoms 
-Cartesian       # positions in cartesian coordinates 
-0 0 0           #<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+1.0
+8.0 0.0 0.0
+0.0 8.0 0.0
+0.0 0.0 8.0
+1
+Cartesian
+0 0 0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>在<code>POT\PAW_PBE\O</code>文件夹中找到氧的<code>POTCAR</code>文件，复制到同一文件夹中，同时按住<code>Shift</code>鼠标右键，打开Linux Shell，执行，</p>
 <pre><code>mpirun -np 2 vasp_std
 或者
@@ -847,43 +855,44 @@ vasp_std</code></pre><p>得到以下结果或者接近结果，则安装成功�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/11/04/vasp-zai-w10-xi-tong-xia-an-zhuang/">
+                <a href="/2019/11/06/vasp-wen-jian-can-shu-he-chang-yong-ming-ling/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="VASP在w10系统下安装">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="VASP文件参数和常用命令">
                         
-                        <span class="card-title">VASP在w10系统下安装</span>
+                        <span class="card-title">VASP文件参数和常用命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            VASP在w10系统下安装VASP有w10版本了？不，只是w10支持Linux子系统了，特别的，本篇讲解一下VASP在w10子系统Ubuntu下的安装~组里没有装VASP服务器，就算有也不敢乱提交作业…何况我只是想学习一下密度泛函，完成课程
+                            VASP文件参数和常用命令文件参数INCARINCAR主要是告诉VASP我们要算什么以及计算的细节
+SYSTEM = H2O          # 计算的体系，随意写
+ALGO = Fast           # 
+ISMEAR = 0 
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-04
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-06
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/软件安装和配置/" class="post-category" target="_blank">
-                                    软件安装和配置
+                            <a href="/categories/编程语法/" class="post-category" target="_blank">
+                                    编程语法
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1100,7 +1109,7 @@ vasp_std</code></pre><p>得到以下结果或者接近结果，则安装成功�
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">12.4k</span>
+            <span class="white-color">12.5k</span>
             
 
             <br>
