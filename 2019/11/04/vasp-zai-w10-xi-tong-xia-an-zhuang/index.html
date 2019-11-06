@@ -350,7 +350,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    2.1k
                 </div>
                 
 
@@ -373,7 +373,7 @@
 <h2 id="准备和总述"><a href="#准备和总述" class="headerlink" title="准备和总述"></a>准备和总述</h2><ul>
 <li>平台和软件准备<ul>
 <li>版本1607之后的64位版本的Windows 10（2016年以后都支持了~）</li>
-<li><a href="https://software.intel.com/en-us/parallel-studio-xe/choose-download/student-linux-fortran" target="_blank" rel="noopener">Intel Parallel Studio XE教育版</a>，用学校邮箱注册，<del>很快就能在垃圾箱里收到邮件了</del>，下载并记录安装序列号，不解压（可见牙膏厂给我国高校发了多少广告）</li>
+<li><a href="https://software.intel.com/en-us/parallel-studio-xe/choose-download/student-linux-fortran" target="_blank" rel="noopener">Intel Parallel Studio XE教育版</a>，用学校邮箱注册，<del>很快就能在垃圾箱里收到邮件了</del>，下载18M的<code>.tgz</code>文件（别下完整版，我们用不到那么多依赖），并记录安装序列号，不解压（可见牙膏厂给我国高校发了多少广告）</li>
 <li><a href="https://pan.baidu.com/s/1kuujmg9f-PimBmkkPmjgBw" target="_blank" rel="noopener">VASP 5.4.4及其POT包压缩包</a>（密码：incv，仅供学习参考用途，只解压一次，得到两个压缩包）</li>
 <li><a href="https://notepad-plus-plus.org/downloads/" target="_blank" rel="noopener">Notepad++</a>（会用Linux系统下vi可以不用，新手推荐）</li>
 </ul>
@@ -390,35 +390,35 @@
 <blockquote>
 <p>注意事项</p>
 <ul>
-<li>Linux子系统的默认安装位置为<code>C:\Users\你w10用户名\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs</code>，建议创建快捷方式，后面会经常用到，以后用<code>你Linux安装地址</code>指代。</li>
+<li>Linux子系统的默认安装位置为<code>C:\Users\你w10用户名\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs</code>，建议创建快捷方式，后面会经常用到，以后用<code>你Linux安装地址</code>指代。<font color="#dd0000">w10下载的安装包千万别直接移到这里，不然Linux系统会识别不到。</font><br></li>
 <li>Linux下的文件<font color="#dd0000">千万不要用w10自带的记事本、写字板打开，</font><br>右键用Notepad++打开编辑。因为w10和Linux换行格式不同。</li>
 </ul>
 </blockquote>
-<p>为增加下载速度，更换国内源。用Notepad++打开<code>你Linux安装地址\etc\apt\sources.list</code>，删除所有内容，加上下面科大源</p>
+<p><del>为增加下载速度，更换国内源。用Notepad++打开<code>你Linux安装地址\etc\apt\sources.list</code>，删除所有内容，加上下面科大源</del>发现使用国内源会报错，还没找到没有解决方法，大家还是科学上网吧= =</p>
 <pre><code>deb https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
 deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
 deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
 deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse</code></pre><p>然后打开Ubuntu Shell（就是那个黑色的输入界面），输入</p>
-<pre class="line-numbers language-linux"><code class="language-linux">source .bashrc
-sudo apt update<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-linux"><code class="language-linux">sudo apt update<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><img src="2.png" alt></p>
 <h2 id="安装Intel-Parallel-Studio-XE需要的依赖"><a href="#安装Intel-Parallel-Studio-XE需要的依赖" class="headerlink" title="安装Intel Parallel Studio XE需要的依赖"></a>安装Intel Parallel Studio XE需要的依赖</h2><p>打开Ubuntu Shell在里面一条条粘贴执行（<code>Enter</code>）以下命令，Shell下粘贴是鼠标右键，一条条安装依赖，有些需要输入<code>Y</code>来继续安装过程。</p>
-<pre class="line-numbers language-linux"><code class="language-linux">sudo apt-get install gfortran
+<pre class="line-numbers language-linux"><code class="language-linux">sudo apt update
+sudo apt-get install gfortran
 sudo apt-get install build-essential
 sudo apt-get install libstdc++5
 sudo apt-get install lib32stdc++6
 sudo apt-get install libc6-dev-i386
 sudo apt-get install g++-multilib
 sudo apt install flex
-sudo apt install texinfo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>这些源有多的，但是我也不知道哪些多的，都装上没问题，少装问题就大了，有实验过的同学可以跟我交流一下，安装完关闭Ubuntu Shell就好</p>
+sudo apt install texinfo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这些依赖有多的，但是我也不知道哪些多的，都装上没问题，少装问题就大了，有实验过的同学可以跟我交流一下，安装完关闭Ubuntu Shell就好</p>
 <h2 id="安装配置Intel-Parallel-Studio-XE"><a href="#安装配置Intel-Parallel-Studio-XE" class="headerlink" title="安装配置Intel Parallel Studio XE"></a>安装配置Intel Parallel Studio XE</h2><ol>
-<li>在你下载的好Intel Parallel Studio XE教育版压缩包的目录下，按住<code>Shift</code>鼠标右键，打开Ubuntu Shell（会cd的自己看着办，小白这样最好这样操作），一条条执行下面命令，其中<code>parallel_studio_xe_2019_update5_cluster_edition_online.tgz</code>换成你下载安装包的名称</li>
+<li>在你下载的好Intel Parallel Studio XE教育版压缩包的目录下，同时按住<code>Shift</code>鼠标右键，打开Linux Shell（会cd的自己看着办，小白这样最好这样操作），一条条执行下面命令，其中<code>parallel_studio_xe_2019_update5_cluster_edition_online.tgz</code>换成你下载安装包的名称</li>
 </ol>
 <pre class="line-numbers language-linux"><code class="language-linux">tar -xzvf parallel_studio_xe_2019_update5_cluster_edition_online.tgz
-cd parallel_studio_xe_2019_update5_cluster_edition_online.tgz
+cd parallel_studio_xe_2019_update5_cluster_edition_online
 sudo ./install.sh<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>一路按照要求进行安装，注意后面选择自定义安装，把不需要的组件全部取消选择（<del>硬盘空间大除外</del>）。编译VASP的环境只需要：Intel C++，Intel fortran，math kernel for fortran，math kenel for C++，以及 Intel mpi，总共安装五个组件，大小约为 5 GB（完整的是 11 GB ）。</p>
+<p>一路按照要求（要学会看英文呀，Linux安装都是英文的，不难的）进行安装，注意后面选择自定义安装，把不需要的组件全部取消选择（<del>硬盘空间大除外</del>）。编译VASP的环境只需要：Intel C++，Intel fortran，math kernel for fortran，math kenel for C++，以及 Intel mpi，总共安装五个组件，但是选择时会额外自动选择其他依赖包，不要取消勾选，大小约为 5 GB（完整的是 16 GB ）。</p>
 <ol start="2">
 <li>安装完后在<code>你Linux安装地址\home\你Ubuntu用户名</code>找到<code>.bashrc</code>文件，<font color="#dd0000">千万不要用w10自带的记事本、写字板打开，</font><br>右键用Notepad++打开，在最后一行内添加如下内容，<code>2019.5.281</code>换成你安装文件的目录</li>
 </ol>
@@ -431,7 +431,7 @@ source /opt/intel/impi/2019.5.281/intel64/bin/mpivars.sh    </code></pre><p>然�
 which icc ifort icpc mpiifort <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>若提示<code>xxx:command not found</code>，再执行一遍上述命令，没有提示即完成，关闭Shell。</p>
 <ol start="3">
-<li>然后进入<code>你Linux安装地址\opt\intel\compilers_and_libraries_2019.5.281\linux\mkl\interfaces\fftw3xf</code>，按住<code>Shift</code>鼠标右键，打开Ubuntu Shell，一条条执行，第一条是进入root用户，需要输入你的用户名密码。第二条编译完退出Shell，该目录下出现文件：<code>libfftw3xf_intel.a</code><pre class="line-numbers language-linux"><code class="language-linux">sudo su
+<li>然后进入<code>你Linux安装地址\opt\intel\compilers_and_libraries_2019.5.281\linux\mkl\interfaces\fftw3xf</code>，同时按住<code>Shift</code>鼠标右键，打开Linux Shell，一条条执行，第一条是进入root用户，需要输入你的用户名密码。第二条编译完退出Shell，该目录下出现文件：<code>libfftw3xf_intel.a</code><pre class="line-numbers language-linux"><code class="language-linux">sudo su
 make libintel64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
 </ol>
@@ -483,7 +483,7 @@ Gamma         #  gamma点centered
 1               # number of atoms 
 Cartesian       # positions in cartesian coordinates 
 0 0 0           #<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>在<code>POT\PAW_PBE\O</code>文件夹中找到氧的<code>POTCAR</code>文件，复制到同一文件夹中，按住<code>Shift</code>鼠标右键，打开Ubuntu Shell，执行，</p>
+<p>在<code>POT\PAW_PBE\O</code>文件夹中找到氧的<code>POTCAR</code>文件，复制到同一文件夹中，同时按住<code>Shift</code>鼠标右键，打开Linux Shell，执行，</p>
 <pre><code>mpirun -np 2 vasp_std
 或者
 vasp_std</code></pre><p>得到以下结果或者接近结果，则安装成功！<br><img src="1.png" alt><br>最后推荐一个VASP学习网站：<a href="https://www.bigbrosci.com/categories/LVASPTHW/page/2/" target="_blank" rel="noopener">Learn VASP The Hard Way</a>。名字看上去很难，但是从Linux入门开始讲起，十分适合新手。</p>
@@ -1100,7 +1100,7 @@ vasp_std</code></pre><p>得到以下结果或者接近结果，则安装成功�
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">12.3k</span>
+            <span class="white-color">12.4k</span>
             
 
             <br>
