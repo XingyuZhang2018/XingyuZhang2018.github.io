@@ -10,8 +10,7 @@
     <meta name="360-site-verification" content>
     <meta name="description" content="VASP文件参数和常用命令文件参数INCARINCAR主要是告诉VASP我们要算什么以及计算的细节
 SYSTEM = H2O          # 计算的体系，随意写
-ALGO = Fast           # 
-ISMEAR = 0 ">
+ISMEAR = 0            # K点数目4 取-5；金属">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -353,7 +352,7 @@ ISMEAR = 0 ">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    113
+                    335
                 </div>
                 
 
@@ -373,14 +372,35 @@ ISMEAR = 0 ">
             <div id="articleContent">
                 <h1 id="VASP文件参数和常用命令"><a href="#VASP文件参数和常用命令" class="headerlink" title="VASP文件参数和常用命令"></a>VASP文件参数和常用命令</h1><h2 id="文件参数"><a href="#文件参数" class="headerlink" title="文件参数"></a>文件参数</h2><h3 id="INCAR"><a href="#INCAR" class="headerlink" title="INCAR"></a>INCAR</h3><p>INCAR主要是告诉VASP我们要算什么以及计算的细节</p>
 <pre class="line-numbers language-vasp"><code class="language-vasp">SYSTEM = H2O          # 计算的体系，随意写
-ALGO = Fast           # 
 ISMEAR = 0            # K点数目<4 取0；K点数目>4 取-5；金属 取1，2
 SIGMA = 0.01          # 对于分子或者原子，用0.01，默认0.2，取小会收敛变慢
+
 ISPIN = 2             # 考虑$\alpha$和$\beta$电子，即磁性
 MAGMOM = 2*2 1*2      # 磁矩
 ISYM = 0              # 不考虑对称性
-IBRION = 2
-NSW = 10<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+ALGO = Normal         # 电子迭代算法 FAST Damped 或 ALL
+EDIFF = 1E-4          # 电子步收敛判据
+IBRION = 2            # 离子步迭代算法conjugate gradient algorithm
+POTIM = 0.1           # 离子步 步长
+NSW = 10              # 离子步 步数
+EDIFFG = 1E-3         # 离子步收敛判据——力判据<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><p>复制文件</p>
+<pre class="line-numbers language-linux"><code class="language-linux">cp file1 file2 -r    # 把文件夹file1复制为file2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>修改文件</p>
+<pre class="line-numbers language-linux"><code class="language-linux">sed -i '$aENCUT = 400' INCAR   #在INCAR最后一行添加ENCUT = 400<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>查看文件</p>
+<pre class="line-numbers language-linux"><code class="language-linux">cat INCAR -n    #查看INCAR文件显示行数<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>一系列参数调节</p>
+<pre><code>for i in {1..8}; do cp 400 $((400+$i*50)) -r; sed -i &quot;s/400/$((400+$i*50))/g&quot;  $((400+$i*50))/INCAR ; done
+for i in *; do cd $i ; mpirun -np 2 vasp_std; cd $OLDPWD; done
+grep User */OUTCAR</code></pre><h3 id="赝势"><a href="#赝势" class="headerlink" title="赝势"></a>赝势</h3><pre class="line-numbers language-linux"><code class="language-linux">cat POTCAR-O POTCAR-H > POTCAR   # 合成赝势
+grep TIT POTCAR                  # 查看元素<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="离子步"><a href="#离子步" class="headerlink" title="离子步"></a>离子步</h3><pre class="line-numbers language-linux"><code class="language-linux">gr       # 查看离子步是否收敛 grep 'reached required accuracy' OUTCAR<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="能量"><a href="#能量" class="headerlink" title="能量"></a>能量</h3><pre class="line-numbers language-linux"><code class="language-linux">grep 'without' OUTCAR<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="时间内存"><a href="#时间内存" class="headerlink" title="时间内存"></a>时间内存</h3><pre class="line-numbers language-linux"><code class="language-linux">tail OUTCAR           # 所有信息
+grep User OUTCAR      # 时间信息
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -760,8 +780,7 @@ NSW = 10<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
                         
                             VASP文件参数和常用命令文件参数INCARINCAR主要是告诉VASP我们要算什么以及计算的细节
 SYSTEM = H2O          # 计算的体系，随意写
-ALGO = Fast           # 
-ISMEAR = 0 
+ISMEAR = 0            # K点数目4 取-5；金属
                         
                     </div>
                     <div class="publish-info">
@@ -1004,7 +1023,7 @@ ISMEAR = 0
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">12.5k</span>
+            <span class="white-color">12.7k</span>
             
 
             <br>
