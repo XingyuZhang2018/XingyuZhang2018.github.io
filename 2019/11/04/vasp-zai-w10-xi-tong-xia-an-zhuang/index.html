@@ -195,7 +195,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -350,14 +350,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    8 分
                 </div>
                 
                 
@@ -369,7 +369,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="VASP在w10系统下安装"><a href="#VASP在w10系统下安装" class="headerlink" title="VASP在w10系统下安装"></a>VASP在w10系统下安装</h1><p>VASP有w10版本了？不，只是w10支持Linux子系统了，特别的，本篇讲解一下VASP在w10子系统Ubuntu下的安装~组里没有装VASP服务器，就算有也不敢乱提交作业…何况我只是想学习一下密度泛函，完成课程作业，还是在自己PC上学习更放心大胆一些。</p>
-<p>本篇参考了<a href="https://zhuanlan.zhihu.com/p/62658094" target="_blank" rel="noopener">Win10安装Ubuntu子系统超详细攻略</a>、<a href="https://zhuanlan.zhihu.com/p/72050942" target="_blank" rel="noopener">vasp 5.4.4 在win10/Ubuntu 18.04上的安装</a>和<a href="https://cndaqiang.github.io/2018/01/09/ubuntu-install-vasp/#%E5%BB%BA%E8%AE%AE%E7%9C%8B%E6%AD%A4%E6%96%87intel-parallel-studio-xe-%E7%BC%96%E8%AF%91vasp%E6%9B%B4%E5%85%B7%E6%9C%89%E6%99%AE%E9%81%8D%E6%80%A7" target="_blank" rel="noopener">Ubuntu VASP安装和运行</a>，感谢前人的探索，我这里稍微写详细一点，整合一下，方便新手入门。</p>
+<p>本篇参考了<a href="https://www.jianshu.com/p/dc32a75e2de4" target="_blank" rel="noopener">史上最全win10下Linux子系统的安装及优化方案</a>、<a href="https://zhuanlan.zhihu.com/p/72050942" target="_blank" rel="noopener">vasp 5.4.4 在win10/Ubuntu 18.04上的安装</a>和<a href="https://cndaqiang.github.io/2018/01/09/ubuntu-install-vasp/#%E5%BB%BA%E8%AE%AE%E7%9C%8B%E6%AD%A4%E6%96%87intel-parallel-studio-xe-%E7%BC%96%E8%AF%91vasp%E6%9B%B4%E5%85%B7%E6%9C%89%E6%99%AE%E9%81%8D%E6%80%A7" target="_blank" rel="noopener">Ubuntu VASP安装和运行</a>，感谢前人的探索，我这里稍微写详细一点，整合一下，方便新手入门。</p>
 <h2 id="准备和总述"><a href="#准备和总述" class="headerlink" title="准备和总述"></a>准备和总述</h2><ul>
 <li>平台和软件准备<ul>
 <li>版本1607之后的64位版本的Windows 10（2016年以后都支持了~）</li>
@@ -380,24 +380,38 @@
 </li>
 </ul>
 <p>思路是这样的，编译VASP需要C++和Fortran的程序包支持，多线需要MPI支持，这三部分集成在Intel Parallel Studio X中，直接在Intel Parallel Studio X平台下安装方便省事，安装Intel Parallel Studio X又需要一些依赖，当然上述都是在Linux环境下的，我们可以通过w10的Ubuntu子系统实现所有编译过程。</p>
-<h2 id="安装Ubuntu子系统"><a href="#安装Ubuntu子系统" class="headerlink" title="安装Ubuntu子系统"></a>安装Ubuntu子系统</h2><p><a href="https://zhuanlan.zhihu.com/p/62658094" target="_blank" rel="noopener">Win10安装Ubuntu子系统超详细攻略</a>这篇图文写得太详细了，我全部用搜索避免繁琐点击，总结一下，不懂再去看。</p>
+<h2 id="安装Ubuntu子系统"><a href="#安装Ubuntu子系统" class="headerlink" title="安装Ubuntu子系统"></a>安装Ubuntu子系统</h2><p><a href="https://www.jianshu.com/p/dc32a75e2de4" target="_blank" rel="noopener">史上最全win10下Linux子系统的安装及优化方案</a>这篇图文写得太详细了，我全部用搜索避免繁琐点击，总结一下，不懂再去看。</p>
 <ol>
 <li>打开设置→搜索“开发者设置”→选择“开发人员模式”</li>
 <li>搜索“启用或关闭windows功能”→倒数第三排勾选上“适用于Linux的Windows子系统”→重启</li>
 <li>打开win10应用商店→搜索“Ubuntu”→选择第一个安装</li>
-<li>启动Ubuntu等待安装完毕→提示输入用户名和密码，Linux下密码是不显示的，但是已经输入</li>
+<li>启动Ubuntu等待安装完毕→提示新建Linux用户名和密码，Linux下密码是不显示的，但是已经输入</li>
 </ol>
-<h2 id="安装Intel-Parallel-Studio-XE需要的依赖"><a href="#安装Intel-Parallel-Studio-XE需要的依赖" class="headerlink" title="安装Intel Parallel Studio XE需要的依赖"></a>安装Intel Parallel Studio XE需要的依赖</h2><p>在Ubuntu Shell（就是那个黑色的输入界面）里面一条条粘贴执行（<code>Enter</code>）以下命令，Shell下粘贴是鼠标右键，一条条安装依赖，有些需要输入<code>Y</code>来继续安装过程。</p>
-<pre class="line-numbers language-linux"><code class="language-linux">sudo apt update
-sudo apt-get install gfortran
+<blockquote>
+<p>注意事项</p>
+<ul>
+<li>Linux子系统的默认安装位置为<code>C:\Users\你w10用户名\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs</code>，建议创建快捷方式，后面会经常用到，以后用<code>你Linux安装地址</code>指代。</li>
+<li>Linux下的文件<font color="#dd0000">千万不要用w10自带的记事本、写字板打开，</font><br>右键用Notepad++打开编辑。因为w10和Linux换行格式不同。</li>
+</ul>
+</blockquote>
+<p>为增加下载速度，更换国内源。用Notepad++打开<code>你Linux安装地址\etc\apt\sources.list</code>，删除所有内容，加上下面科大源</p>
+<pre><code>deb https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse</code></pre><p>然后打开Ubuntu Shell（就是那个黑色的输入界面），输入</p>
+<pre class="line-numbers language-linux"><code class="language-linux">source .bashrc
+sudo apt update<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><img src="2.png" alt></p>
+<h2 id="安装Intel-Parallel-Studio-XE需要的依赖"><a href="#安装Intel-Parallel-Studio-XE需要的依赖" class="headerlink" title="安装Intel Parallel Studio XE需要的依赖"></a>安装Intel Parallel Studio XE需要的依赖</h2><p>打开Ubuntu Shell在里面一条条粘贴执行（<code>Enter</code>）以下命令，Shell下粘贴是鼠标右键，一条条安装依赖，有些需要输入<code>Y</code>来继续安装过程。</p>
+<pre class="line-numbers language-linux"><code class="language-linux">sudo apt-get install gfortran
 sudo apt-get install build-essential
 sudo apt-get install libstdc++5
 sudo apt-get install lib32stdc++6
 sudo apt-get install libc6-dev-i386
 sudo apt-get install g++-multilib
 sudo apt install flex
-sudo apt install texinfo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>安装完关闭Ubuntu Shell就好</p>
+sudo apt install texinfo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这些源有多的，但是我也不知道哪些多的，都装上没问题，少装问题就大了，有实验过的同学可以跟我交流一下，安装完关闭Ubuntu Shell就好</p>
 <h2 id="安装配置Intel-Parallel-Studio-XE"><a href="#安装配置Intel-Parallel-Studio-XE" class="headerlink" title="安装配置Intel Parallel Studio XE"></a>安装配置Intel Parallel Studio XE</h2><ol>
 <li>在你下载的好Intel Parallel Studio XE教育版压缩包的目录下，按住<code>Shift</code>鼠标右键，打开Ubuntu Shell（会cd的自己看着办，小白这样最好这样操作），一条条执行下面命令，其中<code>parallel_studio_xe_2019_update5_cluster_edition_online.tgz</code>换成你下载安装包的名称</li>
 </ol>
@@ -406,7 +420,7 @@ cd parallel_studio_xe_2019_update5_cluster_edition_online.tgz
 sudo ./install.sh<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>一路按照要求进行安装，注意后面选择自定义安装，把不需要的组件全部取消选择（<del>硬盘空间大除外</del>）。编译VASP的环境只需要：Intel C++，Intel fortran，math kernel for fortran，math kenel for C++，以及 Intel mpi，总共安装五个组件，大小约为 5 GB（完整的是 11 GB ）。</p>
 <ol start="2">
-<li>安装完后在<code>C:\Users\你w10用户名\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\你Ubuntu用户名</code>找到<code>.bashrc</code>文件，<font color="#dd0000">千万不要用w10自带的记事本、写字板打开，</font><br>右键用Notepad++打开，在最后一行内添加如下内容，<code>2019.5.281</code>换成你安装文件的目录</li>
+<li>安装完后在<code>你Linux安装地址\home\你Ubuntu用户名</code>找到<code>.bashrc</code>文件，<font color="#dd0000">千万不要用w10自带的记事本、写字板打开，</font><br>右键用Notepad++打开，在最后一行内添加如下内容，<code>2019.5.281</code>换成你安装文件的目录</li>
 </ol>
 <pre><code>source /opt/intel/compilers_and_libraries_2019.5.281/linux/bin/compilervars.sh intel64
 source /opt/intel/compilers_and_libraries_2019.5.281/linux/bin/iccvars.sh intel64
@@ -417,7 +431,7 @@ source /opt/intel/impi/2019.5.281/intel64/bin/mpivars.sh    </code></pre><p>然�
 which icc ifort icpc mpiifort <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>若提示<code>xxx:command not found</code>，再执行一遍上述命令，没有提示即完成，关闭Shell。</p>
 <ol start="3">
-<li>然后进入<code>C:\Users\你w10用户名\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\opt\intel\compilers_and_libraries_2019.5.281\linux\mkl\interfaces\fftw3xf</code>，按住<code>Shift</code>鼠标右键，打开Ubuntu Shell，一条条执行，第一条是进入root用户，需要输入你的用户名密码。第二条编译完退出Shell，该目录下出现文件：<code>libfftw3xf_intel.a</code><pre class="line-numbers language-linux"><code class="language-linux">sudo su
+<li>然后进入<code>你Linux安装地址\opt\intel\compilers_and_libraries_2019.5.281\linux\mkl\interfaces\fftw3xf</code>，按住<code>Shift</code>鼠标右键，打开Ubuntu Shell，一条条执行，第一条是进入root用户，需要输入你的用户名密码。第二条编译完退出Shell，该目录下出现文件：<code>libfftw3xf_intel.a</code><pre class="line-numbers language-linux"><code class="language-linux">sudo su
 make libintel64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
 </ol>
@@ -425,11 +439,11 @@ make libintel64<span aria-hidden="true" class="line-numbers-rows"><span></span><
 <li>在你解压好得VASP两个压缩包的目录下，按住<code>Shift</code>鼠标右键，打开Ubuntu Shell一条条执行下面命令，</li>
 </ol>
 <pre class="line-numbers language-linux"><code class="language-linux">tar -xzvf vasp.5.4.4.tar.gz
-tar POT.txz
+tar -xzvf POT.txz
 cd vasp.5.4.4
 cp arch/makefile.include.linux_intel makefile.include<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>得到<code>makefile.include</code>文件，<font color="#dd0000">千万不要用w10自带的记事本、写字板打开，</font><br>右键用Notepad++打开，修改以下内容</p>
-<pre><code>MKLROOT    = /opt/intel/compilers_and_libraries_2019.4.243/linux/mkl
+<pre><code>MKLROOT    = /opt/intel/compilers_and_libraries_2019.5.281/linux/mkl
 MKL_PATH   = $(MKLROOT)/lib/intel64
 BLAS       =
 LAPACK     =
@@ -440,7 +454,7 @@ SCALAPACK  = $(MKL_PATH)/libmkl_scalapack_lp64.a $(BLACS)</code></pre><pre><code
 <pre class="line-numbers language-Linux"><code class="language-Linux">make all<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>大概30分钟左右会完成编译，关闭Shell，在bin文件夹中会生成三个文件<code>vasp_gam  vasp_ncl  vasp_std</code></p>
 </li>
-<li><p>最后添加环境变量，在~/.bashrc中添加以下内容，<font color="#dd0000">千万不要用w10自带的记事本、写字板打开，</font><br>右键用Notepad++打开。</p>
+<li><p>最后添加环境变量，在<code>你Linux安装地址/home/你Linux用户名/.bashrc</code>中添加以下内容，<font color="#dd0000">千万不要用w10自带的记事本、写字板打开，</font><br>右键用Notepad++打开。</p>
 <pre><code>export PATH=/home/你的Linux用户名/soft/vasp:$PATH</code></pre></li>
 </ol>
 <p>打开Shell，一条条执行以代码</p>
@@ -842,7 +856,7 @@ vasp_std</code></pre><p>得到以下结果或者接近结果，则安装成功�
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="VASP在w10系统下安装">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="VASP在w10系统下安装">
                         
                         <span class="card-title">VASP在w10系统下安装</span>
                     </div>
@@ -892,7 +906,7 @@ vasp_std</code></pre><p>得到以下结果或者接近结果，则安装成功�
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="《如何阅读一本书》（二）">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="《如何阅读一本书》（二）">
                         
                         <span class="card-title">《如何阅读一本书》（二）</span>
                     </div>
@@ -1086,7 +1100,7 @@ vasp_std</code></pre><p>得到以下结果或者接近结果，则安装成功�
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">12k</span>
+            <span class="white-color">12.3k</span>
             
 
             <br>
