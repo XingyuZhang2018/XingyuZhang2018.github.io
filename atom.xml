@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xn--3ds27ck5co6e.com/"/>
-  <updated>2019-11-06T13:52:52.868Z</updated>
+  <updated>2019-11-08T13:01:14.696Z</updated>
   <id>http://xn--3ds27ck5co6e.com/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Linux常用命令</title>
+    <link href="http://xn--3ds27ck5co6e.com/2019/11/07/linux-chang-yong-ming-ling/"/>
+    <id>http://xn--3ds27ck5co6e.com/2019/11/07/linux-chang-yong-ming-ling/</id>
+    <published>2019-11-07T13:21:59.000Z</published>
+    <updated>2019-11-08T13:01:14.696Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Linux常用命令&quot;&gt;&lt;a href=&quot;#Linux常用命令&quot; class=&quot;headerlink&quot; title=&quot;Linux常用命令&quot;&gt;&lt;/a&gt;Linux常用命令&lt;/h1&gt;&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="编程语法" scheme="http://xn--3ds27ck5co6e.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E6%B3%95/"/>
+    
+    
+      <category term="Linux" scheme="http://xn--3ds27ck5co6e.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>VASP文件参数和常用命令</title>
     <link href="http://xn--3ds27ck5co6e.com/2019/11/06/vasp-wen-jian-can-shu-he-chang-yong-ming-ling/"/>
     <id>http://xn--3ds27ck5co6e.com/2019/11/06/vasp-wen-jian-can-shu-he-chang-yong-ming-ling/</id>
     <published>2019-11-06T09:18:12.000Z</published>
-    <updated>2019-11-06T13:52:52.868Z</updated>
+    <updated>2019-11-08T09:00:35.895Z</updated>
     
     <summary type="html">
     
@@ -47,7 +73,7 @@
     <link href="http://xn--3ds27ck5co6e.com/2019/11/04/vasp-zai-w10-xi-tong-xia-an-zhuang/"/>
     <id>http://xn--3ds27ck5co6e.com/2019/11/04/vasp-zai-w10-xi-tong-xia-an-zhuang/</id>
     <published>2019-11-04T11:53:35.000Z</published>
-    <updated>2019-11-06T12:03:18.667Z</updated>
+    <updated>2019-11-07T13:02:36.373Z</updated>
     
     <summary type="html">
     
@@ -64,9 +90,9 @@
       <category term="软件安装和配置" scheme="http://xn--3ds27ck5co6e.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
     
     
-      <category term="VASP" scheme="http://xn--3ds27ck5co6e.com/tags/VASP/"/>
-    
       <category term="Linux" scheme="http://xn--3ds27ck5co6e.com/tags/Linux/"/>
+    
+      <category term="VASP" scheme="http://xn--3ds27ck5co6e.com/tags/VASP/"/>
     
       <category term="WSL" scheme="http://xn--3ds27ck5co6e.com/tags/WSL/"/>
     

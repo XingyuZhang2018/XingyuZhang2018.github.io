@@ -197,7 +197,7 @@ ISMEAR = 0            # K点数目4 取-5；金属">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -352,14 +352,14 @@ ISMEAR = 0            # K点数目4 取-5；金属">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    335
+                    600
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
                 
@@ -381,26 +381,49 @@ ISYM = 0              # 不考虑对称性
 
 ALGO = Normal         # 电子迭代算法 FAST Damped 或 ALL
 EDIFF = 1E-4          # 电子步收敛判据
+ENCUT = 300           # 截断能量
 IBRION = 2            # 离子步迭代算法conjugate gradient algorithm
 POTIM = 0.1           # 离子步 步长
 NSW = 10              # 离子步 步数
-EDIFFG = 1E-3         # 离子步收敛判据——力判据<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+EDIFFG = 1E-3         # 离子步收敛判据——力判据<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="KPOINTS"><a href="#KPOINTS" class="headerlink" title="KPOINTS"></a>KPOINTS</h3><pre class="line-numbers language-vasp"><code class="language-vasp">K-POINTS       # 随意写
+0              # 自动生成K点
+G              # G Gamma点中心 | M Monkhorst-Pack 方法 
+1 1 1          # 在xyz三个方向上生成对应数目的K点
+0 0 0          # 一般静态模拟0 0 0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>脚本</p>
+<pre class="line-numbers language-linux"><code class="language-linux">#! /usr/bin/env bash
+
+# To generate KPOINT file
+# Written by Xingyu on 2019-11-8
+# To use it: kpoints.sh 3 3 1
+
+echo K-POINTS > KPOINTS
+echo 0 >> KPOINTS
+echo Gamma-Centered >> KPOINTS
+echo $1 $2 $3 >> KPOINTS
+echo 0 0 0 >> KPOINTS<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><p>复制文件</p>
 <pre class="line-numbers language-linux"><code class="language-linux">cp file1 file2 -r    # 把文件夹file1复制为file2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>修改文件</p>
-<pre class="line-numbers language-linux"><code class="language-linux">sed -i '$aENCUT = 400' INCAR   #在INCAR最后一行添加ENCUT = 400<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-linux"><code class="language-linux">sed -i '$aENCUT = 400' INCAR   #在INCAR最后一行添加ENCUT = 400
+sed -i "s/400/500/g"  500/INCAR ; #把500文件夹中INCAR中的400改为500<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>查看文件</p>
 <pre class="line-numbers language-linux"><code class="language-linux">cat INCAR -n    #查看INCAR文件显示行数<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>一系列参数调节</p>
-<pre><code>for i in {1..8}; do cp 400 $((400+$i*50)) -r; sed -i &quot;s/400/$((400+$i*50))/g&quot;  $((400+$i*50))/INCAR ; done
-for i in *; do cd $i ; mpirun -np 2 vasp_std; cd $OLDPWD; done
-grep User */OUTCAR</code></pre><h3 id="赝势"><a href="#赝势" class="headerlink" title="赝势"></a>赝势</h3><pre class="line-numbers language-linux"><code class="language-linux">cat POTCAR-O POTCAR-H > POTCAR   # 合成赝势
-grep TIT POTCAR                  # 查看元素<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="赝势"><a href="#赝势" class="headerlink" title="赝势"></a>赝势</h3><pre class="line-numbers language-linux"><code class="language-linux">potcar H O                   # 合成赝势 cat POTCAR-O POTCAR-H > POTCAR
+pos2pot                      # 按照POSCAR生成POTCAR potcar.sh  $(sed -n 6p POSCAR)"
+gt                           # 查看元素 grep TIT POTCAR  
+grep ENMAX POTCAR            # 查看截断能量<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="离子步"><a href="#离子步" class="headerlink" title="离子步"></a>离子步</h3><pre class="line-numbers language-linux"><code class="language-linux">gr       # 查看离子步是否收敛 grep 'reached required accuracy' OUTCAR<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="能量"><a href="#能量" class="headerlink" title="能量"></a>能量</h3><pre class="line-numbers language-linux"><code class="language-linux">grep 'without' OUTCAR<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="时间内存"><a href="#时间内存" class="headerlink" title="时间内存"></a>时间内存</h3><pre class="line-numbers language-linux"><code class="language-linux">tail OUTCAR           # 所有信息
-grep User OUTCAR      # 时间信息
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+grep User OUTCAR      # 时间信息<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="批量操作"><a href="#批量操作" class="headerlink" title="批量操作"></a>批量操作</h3><pre class="line-numbers language-linux"><code class="language-linux">for i in {1..8}; do cp 400 $((400+$i*50)) -r; sed -i "s/400/$((400+$i*50))/g"  $((400+$i*50))/INCAR ; done       # 制作不同INCAR参数文件
+for i in *0; do cd $i ; mpirun -np 2 vasp_std; cd $OLDPWD; done  # 提交任务
+grep User */OUTCAR   # 所有时间信息
+for i in *0; do echo -e $i "\t" $(grep User $i/OUTCAR | awk '{print $4}'); done  # 打印时间第四个信息
+for i in *0; do echo -e $i, $(grep User $i/OUTCAR | awk '{print $4}'); done > data.dat  # 把上面信息转化为data.dat
+for i in *0; do echo -e $i, $(grep User $i/OUTCAR | awk '{print $4}') , $(grep ' without' $i/OUTCAR | tail -n 1 | awk '{print $4}'); done > data.dat  # 打印时间和能量的第四个信息，并转化为data.dat<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -761,32 +784,31 @@ grep User OUTCAR      # 时间信息
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/11/06/vasp-wen-jian-can-shu-he-chang-yong-ming-ling/">
+                <a href="/2019/11/07/linux-chang-yong-ming-ling/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="VASP文件参数和常用命令">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Linux常用命令">
                         
-                        <span class="card-title">VASP文件参数和常用命令</span>
+                        <span class="card-title">Linux常用命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            VASP文件参数和常用命令文件参数INCARINCAR主要是告诉VASP我们要算什么以及计算的细节
-SYSTEM = H2O          # 计算的体系，随意写
-ISMEAR = 0            # K点数目4 取-5；金属
+                            Linux常用命令目录cd ..                                    # 返回上一层
+mkmir file                               # 新建文件夹
+rm file    
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-06
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-07
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -799,12 +821,11 @@ ISMEAR = 0            # K点数目4 取-5；金属
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/VASP/" target="_blank">
-                        <span class="chip bg-color">VASP</span>
+                    <a href="/tags/Linux/" target="_blank">
+                        <span class="chip bg-color">Linux</span>
                     </a>
                     
                 </div>
@@ -822,7 +843,7 @@ ISMEAR = 0            # K点数目4 取-5；金属
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="VASP在w10系统下安装">
+                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="VASP在w10系统下安装">
                         
                         <span class="card-title">VASP在w10系统下安装</span>
                     </div>
@@ -852,12 +873,12 @@ ISMEAR = 0            # K点数目4 取-5；金属
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/VASP/" target="_blank">
-                        <span class="chip bg-color">VASP</span>
-                    </a>
-                    
                     <a href="/tags/Linux/" target="_blank">
                         <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/tags/VASP/" target="_blank">
+                        <span class="chip bg-color">VASP</span>
                     </a>
                     
                     <a href="/tags/WSL/" target="_blank">
@@ -1023,7 +1044,7 @@ ISMEAR = 0            # K点数目4 取-5；金属
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">12.7k</span>
+            <span class="white-color">13.1k</span>
             
 
             <br>
