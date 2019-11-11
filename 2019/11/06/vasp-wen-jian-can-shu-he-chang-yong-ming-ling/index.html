@@ -197,7 +197,7 @@ ISMEAR = 0            # K点数目4 取-5；金属">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/25.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -352,14 +352,14 @@ ISMEAR = 0            # K点数目4 取-5；金属">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    600
+                    935
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
                 
@@ -382,10 +382,13 @@ ISYM = 0              # 不考虑对称性
 ALGO = Normal         # 电子迭代算法 FAST Damped 或 ALL
 EDIFF = 1E-4          # 电子步收敛判据
 ENCUT = 300           # 截断能量
+NELM = 60             # 电子步数
+
+ISIF = 3              # 2晶胞形状不变化；3变化
 IBRION = 2            # 离子步迭代算法conjugate gradient algorithm
 POTIM = 0.1           # 离子步 步长
 NSW = 10              # 离子步 步数
-EDIFFG = 1E-3         # 离子步收敛判据——力判据<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+EDIFFG = 1E-3         # 离子步收敛判据——力判据<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="KPOINTS"><a href="#KPOINTS" class="headerlink" title="KPOINTS"></a>KPOINTS</h3><pre class="line-numbers language-vasp"><code class="language-vasp">K-POINTS       # 随意写
 0              # 自动生成K点
 G              # G Gamma点中心 | M Monkhorst-Pack 方法 
@@ -415,15 +418,29 @@ pos2pot                      # 按照POSCAR生成POTCAR potcar.sh  $(sed -n 6p P
 gt                           # 查看元素 grep TIT POTCAR  
 grep ENMAX POTCAR            # 查看截断能量<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="离子步"><a href="#离子步" class="headerlink" title="离子步"></a>离子步</h3><pre class="line-numbers language-linux"><code class="language-linux">gr       # 查看离子步是否收敛 grep 'reached required accuracy' OUTCAR<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h3 id="能量"><a href="#能量" class="headerlink" title="能量"></a>能量</h3><pre class="line-numbers language-linux"><code class="language-linux">grep 'without' OUTCAR<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="能量"><a href="#能量" class="headerlink" title="能量"></a>能量</h3><pre class="line-numbers language-linux"><code class="language-linux">ge       # 查看能量 grep 'without' OUTCAR<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="时间内存"><a href="#时间内存" class="headerlink" title="时间内存"></a>时间内存</h3><pre class="line-numbers language-linux"><code class="language-linux">tail OUTCAR           # 所有信息
 grep User OUTCAR      # 时间信息<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h3 id="批量操作"><a href="#批量操作" class="headerlink" title="批量操作"></a>批量操作</h3><pre class="line-numbers language-linux"><code class="language-linux">for i in {1..8}; do cp 400 $((400+$i*50)) -r; sed -i "s/400/$((400+$i*50))/g"  $((400+$i*50))/INCAR ; done       # 制作不同INCAR参数文件
+<h3 id="批量操作"><a href="#批量操作" class="headerlink" title="批量操作"></a>批量操作</h3><blockquote>
+<p>以下所有操作<code>cp</code>都自定义为<code>cp -r</code></p>
+</blockquote>
+<p>ENCAR</p>
+<pre class="line-numbers language-linux"><code class="language-linux">for i in {1..8}; do cp 400 $((400+$i*50)); sed -i "s/400/$((400+$i*50))/g"  $((400+$i*50))/INCAR ; done       # 制作不同INCAR参数文件
 for i in *0; do cd $i ; mpirun -np 2 vasp_std; cd $OLDPWD; done  # 提交任务
-grep User */OUTCAR   # 所有时间信息
-for i in *0; do echo -e $i "\t" $(grep User $i/OUTCAR | awk '{print $4}'); done  # 打印时间第四个信息
-for i in *0; do echo -e $i, $(grep User $i/OUTCAR | awk '{print $4}'); done > data.dat  # 把上面信息转化为data.dat
-for i in *0; do echo -e $i, $(grep User $i/OUTCAR | awk '{print $4}') , $(grep ' without' $i/OUTCAR | tail -n 1 | awk '{print $4}'); done > data.dat  # 打印时间和能量的第四个信息，并转化为data.dat<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+for i in *0; do echo -e $i, $(grep User $i/OUTCAR | awk '{print $4}') , $(grep ' without' $i/OUTCAR | tail -n 1 | awk '{print $4}'); done > ENCUT.dat  # 打印时间和能量的第四个信息，并转化为data.dat<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>EDIFF</p>
+<pre class="line-numbers language-linux"><code class="language-linux">for i in {2..6}; do cp 1 $i; sed -i "6s/-1/$((-$i))/g" $i/INCAR ; done       # 制作不同INCAR参数文件
+for i in *; do cd $i ; mpirun -np 2 vasp_std; cd $OLDPWD; done  # 提交任务
+for i in *; do echo -e $i, $(grep User $i/OUTCAR | awk '{print $4}') , $(grep ' without' $i/OUTCAR | tail -n 1 | awk '{print $4}'); done > EDIFF.dat  # 打印时间和能量的第四个信息，并转化为data.dat<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>KPOINTS</p>
+<pre class="line-numbers language-linux"><code class="language-linux">for i in {2..6}; do cp 111 ${i}${i}${i}; sed -i "4s/1 1 1/$i $i $i/g" ${i}${i}${i}/KPOINTS ; done        # 制作不同KPOINTS参数文件
+for i in {4..6}; do sed -i "2s/0/-5/g" ${i}${i}${i}/INCAR ; done                                       # 修改ISMEAR参数
+for i in {1..6}; do cd ${i}${i}${i} ; mpirun -np 2 vasp_std; cd $OLDPWD; done  # 提交任务
+for i in {1..6}; do echo -e $i, $(grep User ${i}${i}${i}/OUTCAR | awk '{print $4}') , $(grep ' without' ${i}${i}${i}/OUTCAR | tail -n 1 | awk '{print $4}'); done > KPOINTS.dat  # 打印时间和能量的第四个信息，并转化为data.dat<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Lattice Parameter</p>
+<pre class="line-numbers language-linux"><code class="language-linux">for i in 0.95 0.96 0.97 0.98 0.99 1.01 1.02 1.03 1.04 1.05; do cp 1.00 $i ; sed -i "2s/1.0/$i/g" $i/POSCAR ; done        # 制作不同POSCAR参数文件
+for i in *; do cd $i ; mpirun -np 2 vasp_std; cd $OLDPWD; done  # 提交任务                                    # 修改ISMEAR参数
+for i in 0.95 0.96 0.97 0.98 0.99 1.00 1.01 1.02 1.03 1.04 1.05; do echo -e $i, $(grep User $i/OUTCAR | awk '{print $4}') , $(grep ' without' $i/OUTCAR | tail -n 1 | awk '{print $4}'); done > Lattice_Parameter.dat  # 打印时间和能量的第四个信息，并转化为data.dat<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -792,7 +809,7 @@ for i in *0; do echo -e $i, $(grep User $i/OUTCAR | awk '{print $4}') , $(grep '
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Linux常用命令">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Linux常用命令">
                         
                         <span class="card-title">Linux常用命令</span>
                     </div>
@@ -843,7 +860,7 @@ rm file
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="VASP在w10系统下安装">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="VASP在w10系统下安装">
                         
                         <span class="card-title">VASP在w10系统下安装</span>
                     </div>
@@ -1044,7 +1061,7 @@ rm file
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">13.1k</span>
+            <span class="white-color">13.4k</span>
             
 
             <br>
