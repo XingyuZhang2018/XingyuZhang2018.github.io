@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xn--3ds27ck5co6e.com/"/>
-  <updated>2019-11-08T13:01:14.696Z</updated>
+  <updated>2019-11-30T09:34:51.804Z</updated>
   <id>http://xn--3ds27ck5co6e.com/</id>
   
   <author>
@@ -17,11 +17,96 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>密度泛函理论与应用</title>
+    <link href="http://xn--3ds27ck5co6e.com/2019/11/30/mi-du-fan-han-li-lun-yu-ying-yong/"/>
+    <id>http://xn--3ds27ck5co6e.com/2019/11/30/mi-du-fan-han-li-lun-yu-ying-yong/</id>
+    <published>2019-11-30T09:02:33.000Z</published>
+    <updated>2019-11-30T09:34:51.804Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;密度泛函理论与应用&quot;&gt;&lt;a href=&quot;#密度泛函理论与应用&quot; class=&quot;headerlink&quot; title=&quot;密度泛函理论与应用&quot;&gt;&lt;/a&gt;密度泛函理论与应用&lt;/h1&gt;&lt;p&gt;这里先放一张课程的思维导图，考完试后再详细些一点东西。&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="物理" scheme="http://xn--3ds27ck5co6e.com/categories/%E7%89%A9%E7%90%86/"/>
+    
+    
+      <category term="DFT" scheme="http://xn--3ds27ck5co6e.com/tags/DFT/"/>
+    
+      <category term="密度泛函理论" scheme="http://xn--3ds27ck5co6e.com/tags/%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python绘图</title>
+    <link href="http://xn--3ds27ck5co6e.com/2019/11/25/python-hui-tu/"/>
+    <id>http://xn--3ds27ck5co6e.com/2019/11/25/python-hui-tu/</id>
+    <published>2019-11-25T07:11:38.000Z</published>
+    <updated>2019-11-27T13:39:27.610Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Python绘图&quot;&gt;&lt;a href=&quot;#Python绘图&quot; class=&quot;headerlink&quot; title=&quot;Python绘图&quot;&gt;&lt;/a&gt;Python绘图&lt;/h1&gt;&lt;p&gt;直接看&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="编程语法" scheme="http://xn--3ds27ck5co6e.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E6%B3%95/"/>
+    
+    
+      <category term="Python" scheme="http://xn--3ds27ck5co6e.com/tags/Python/"/>
+    
+      <category term="matplotlib" scheme="http://xn--3ds27ck5co6e.com/tags/matplotlib/"/>
+    
+      <category term="绘图" scheme="http://xn--3ds27ck5co6e.com/tags/%E7%BB%98%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Latex常用语法</title>
+    <link href="http://xn--3ds27ck5co6e.com/2019/11/11/latex-chang-yong-yu-fa/"/>
+    <id>http://xn--3ds27ck5co6e.com/2019/11/11/latex-chang-yong-yu-fa/</id>
+    <published>2019-11-11T02:10:16.000Z</published>
+    <updated>2019-11-30T09:02:54.339Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Latex常用语法&quot;&gt;&lt;a href=&quot;#Latex常用语法&quot; class=&quot;headerlink&quot; title=&quot;Latex常用语法&quot;&gt;&lt;/a&gt;Latex常用语法&lt;/h1&gt;&lt;h2 id=&quot;图片&quot;&gt;&lt;a href=&quot;#图片&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="编程语法" scheme="http://xn--3ds27ck5co6e.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E6%B3%95/"/>
+    
+    
+      <category term="Latex" scheme="http://xn--3ds27ck5co6e.com/tags/Latex/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux常用命令</title>
     <link href="http://xn--3ds27ck5co6e.com/2019/11/07/linux-chang-yong-ming-ling/"/>
     <id>http://xn--3ds27ck5co6e.com/2019/11/07/linux-chang-yong-ming-ling/</id>
     <published>2019-11-07T13:21:59.000Z</published>
-    <updated>2019-11-08T13:01:14.696Z</updated>
+    <updated>2019-11-12T02:34:56.833Z</updated>
     
     <summary type="html">
     
