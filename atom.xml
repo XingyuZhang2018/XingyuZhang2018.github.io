@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xn--3ds27ck5co6e.com/"/>
-  <updated>2019-12-16T02:40:04.580Z</updated>
+  <updated>2019-12-16T07:40:55.894Z</updated>
   <id>http://xn--3ds27ck5co6e.com/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>写作思考</title>
+    <link href="http://xn--3ds27ck5co6e.com/2019/12/16/xie-zuo-si-kao/"/>
+    <id>http://xn--3ds27ck5co6e.com/2019/12/16/xie-zuo-si-kao/</id>
+    <published>2019-12-16T06:34:24.000Z</published>
+    <updated>2019-12-16T07:40:55.894Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;写作思考&quot;&gt;&lt;a href=&quot;#写作思考&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://xn--3ds27ck5co6e.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="写作" scheme="http://xn--3ds27ck5co6e.com/tags/%E5%86%99%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>《爱的沟通》</title>
     <link href="http://xn--3ds27ck5co6e.com/2019/12/16/ai-de-gou-tong/"/>
     <id>http://xn--3ds27ck5co6e.com/2019/12/16/ai-de-gou-tong/</id>
     <published>2019-12-16T02:10:17.000Z</published>
-    <updated>2019-12-16T02:40:04.580Z</updated>
+    <updated>2019-12-16T07:57:13.914Z</updated>
     
     <summary type="html">
     
@@ -210,32 +236,6 @@
   </entry>
   
   <entry>
-    <title>《如何阅读一本书》（二）</title>
-    <link href="http://xn--3ds27ck5co6e.com/2019/11/02/ru-he-yue-du-yi-ben-shu-er/"/>
-    <id>http://xn--3ds27ck5co6e.com/2019/11/02/ru-he-yue-du-yi-ben-shu-er/</id>
-    <published>2019-11-02T07:43:14.000Z</published>
-    <updated>2019-11-02T10:41:59.937Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;《如何阅读一本书》（二）阅读的层次&quot;&gt;&lt;a href=&quot;#《如何阅读一本书》（二）阅读的层次&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="读书笔记" scheme="http://xn--3ds27ck5co6e.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="思维技巧" scheme="http://xn--3ds27ck5co6e.com/tags/%E6%80%9D%E7%BB%B4%E6%8A%80%E5%B7%A7/"/>
-    
-  </entry>
-  
-  <entry>
     <title>有限群的线性表示理论</title>
     <link href="http://xn--3ds27ck5co6e.com/2019/10/31/you-xian-qun-de-xian-xing-biao-shi-li-lun/"/>
     <id>http://xn--3ds27ck5co6e.com/2019/10/31/you-xian-qun-de-xian-xing-biao-shi-li-lun/</id>
@@ -292,11 +292,11 @@
   </entry>
   
   <entry>
-    <title>《如何阅读一本书》（一）</title>
-    <link href="http://xn--3ds27ck5co6e.com/2019/10/30/ru-he-yue-du-yi-ben-shu-yi/"/>
-    <id>http://xn--3ds27ck5co6e.com/2019/10/30/ru-he-yue-du-yi-ben-shu-yi/</id>
+    <title>《如何阅读一本书》</title>
+    <link href="http://xn--3ds27ck5co6e.com/2019/10/30/ru-he-yue-du-yi-ben-shu/"/>
+    <id>http://xn--3ds27ck5co6e.com/2019/10/30/ru-he-yue-du-yi-ben-shu/</id>
     <published>2019-10-30T02:24:33.000Z</published>
-    <updated>2019-10-30T09:41:18.480Z</updated>
+    <updated>2019-12-16T08:09:43.606Z</updated>
     
     <summary type="html">
     
@@ -304,7 +304,7 @@
       
         
         
-          &lt;h1 id=&quot;《如何阅读一本书》（一）阅读的活力与艺术&quot;&gt;&lt;a href=&quot;#《如何阅读一本书》（一）阅读的活力与艺术&quot; class=&quot;headerlink&quot;
+          &lt;h1 id=&quot;《如何阅读一本书》&quot;&gt;&lt;a href=&quot;#《如何阅读一本书》&quot; class=&quot;headerlink&quot; title=&quot;《如何阅读一本书》&quot;&gt;&lt;/a&gt;《如何阅读一本书》&lt;/h1&gt;&lt;p&gt;为什么要阅读&lt;a
         
       
     
