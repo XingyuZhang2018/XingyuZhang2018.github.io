@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>VUMPS</title>
+      <link href="/2020/08/30/vumps/"/>
+      <url>/2020/08/30/vumps/</url>
+      
+        <content type="html"><![CDATA[<h1 id="VUMPS"><a href="#VUMPS" class="headerlink" title="VUMPS"></a>VUMPS</h1><h2 id="UMPS——热力学极限下平移不变MPS"><a href="#UMPS——热力学极限下平移不变MPS" class="headerlink" title="UMPS——热力学极限下平移不变MPS"></a>UMPS——热力学极限下平移不变MPS</h2><p>在热力学极限下UMPS定义为：</p><p>$$|\Psi(A)\rangle=\sum_{\{s\}} v_{L}^{\dagger}\left[\prod_{m \in \mathbb{Z}} A^{s_{m}}\right] v_{R}|\{s\}\rangle$$</p><p>其中$A^s$为$s$格点上$D\times D$维矩阵。$A$为$D\times d \times D$维张量，$d$为物理自旋指标，$D$为连接指标。用张量网络图表示为：</p><p><img src="1.png" alt></p><p>当在无穷大系统上时，可以看出每个格点上的张量都是一样的，所以是平移不变的张量网络，并且物理性质只与张量$A$有关，与边界$v_{L}^{\dagger}$和$v_{R}$无关。</p><p>讨论波函数归一化时，会遇到转移矩阵：<br><img src="5.png" width="500/"><br><img src="2.png" width="200/"><br>由于归一化使得该矩阵的最大本征值为正数$\eta$，重新标度$A\rightarrow A/\sqrt{\eta}$，使得本征方程满足：<br><img src="3.png" width="400/"><br>于是$\operatorname{Tr}(l r)=1$，即：<br><img src="4.png" width="100/"><br>那么无限大系统的波函数归一化导致转移矩阵收缩到不动点：<br><img src="6.png" width="200/"></p><p>对于给定张量$A$可以唯一确定态，但给定态张量$A$可以有规范变换空间：<br><img src="7.png" width="300/"></p><p>这里引入左正则形式张量：<br><img src="8.png" width="300/"><br>满足条件<br><img src="9.png" width="100/"><br>将定义带入条件<br><img src="10.png" width="500/"><br>易得：$l=L^{\dagger}L$，即变换矩阵由转移矩阵的不动点确定。</p><p>同理，右正则形式张量$A_R=R^{-1}AR$，其中$r=R^{\dagger}R$</p><p>由左右正则形式可以定义混合正则形式，将一般形式左边插入$L^{-1}L$，右边插入$RR^{-1}$，中间出现非左右正则形式定义为$A_C$：<br><img src="11.png" width="500/"></p><p>而这种由左正则形式转换为右正则形式的中间过渡刚好可以引入左右正则形式转换矩阵$C=LR$表示：<br><img src="12.png" width="400/"><br><img src="13.png" width="400/"></p><p>算法实现一般形式到正则形式变换一般不用转移矩阵的不动点，因为当转移矩阵有小能隙时不适用。将$A_L=LAL^{-1}$变换为$A_L L = LA$，通过迭代QR分解$LA$来得到$A_L$。<br><img src="14.png" width="400/"><br>进一步加速收敛可以下面的不动点来求得$L$<br><img src="15.png" width="200/"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 物理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 张量网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>群论基础（一）如何展示有限群？</title>
+      <link href="/2019/12/22/qun-lun-ji-chu-yi-ru-he-zhan-shi-you-xian-qun/"/>
+      <url>/2019/12/22/qun-lun-ji-chu-yi-ru-he-zhan-shi-you-xian-qun/</url>
+      
+        <content type="html"><![CDATA[<h1 id="群论基础（一）如何展示有限群？"><a href="#群论基础（一）如何展示有限群？" class="headerlink" title="群论基础（一）如何展示有限群？"></a>群论基础（一）如何展示有限群？</h1><p>这是群论入门系列的第一篇，会从群的引入定义到怎么表示慢慢讲起，围绕怎么又快又好得写出群的乘法表展开学习一系列群的知识。</p><h2 id="群的引入"><a href="#群的引入" class="headerlink" title="群的引入"></a>群的引入</h2><h2 id="群的展示（presention）"><a href="#群的展示（presention）" class="headerlink" title="群的展示（presention）"></a>群的展示（presention）</h2><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 物理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 群论 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>写作思考</title>
       <link href="/2019/12/16/xie-zuo-si-kao/"/>
       <url>/2019/12/16/xie-zuo-si-kao/</url>
